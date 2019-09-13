@@ -57,7 +57,32 @@
         </p>
         <img src="img/small-map.png" alt="Карта месторасположения">
         <button class="map" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button> 
-      </div>         
+      </div>
+      <section class="large-map">
+        <p>
+         <img src="img/big-map.png">  
+        </p>
+        <button type="button">x</button>  
+      </section>    
+      <section class="connection"> 
+        <h2 class="visually-hidden">Заблудились? Напишите нам</h2>
+        <form action="http://index.html" method="get">
+         <p>
+           <label for="connection-name">Ваше имя:</label>     
+           <input id="connection-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+         </p>
+         <p>
+             <label for="connection-email">Ваш e-mail:</label>     
+           <input id="connection-email" type="text" name="email" value="" placeholder="email@example.com">
+         </p>
+         <p>
+           <label for="connection-text">Текст письма:</label>   
+           <input id="connection-text" type="text" name="text" value="" placeholder="В свободной форме">
+         </p>
+         <button type="submit">Отправить</button>  
+         <button type="button">x</button>    
+        </form>
+      </section>     
     </main>
     <footer class="main-footer">
       <a class="footer-logo"><img src="img/logo-technomart.svg" alt="Логотип  «Техномарт»">
@@ -100,7 +125,7 @@
         <p class="signature-value">
           <a href="https://htmlacademy.ru">htmlacademy.ru</a>
         </p> 
-      </div> 
+      </div>     
     </footer>
   </body>
 </html>
