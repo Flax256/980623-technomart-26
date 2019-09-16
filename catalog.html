@@ -11,7 +11,7 @@
       </a>
       <span class="finder-link">Поиск</span> 
       <a class="bookmarks-link" href="">Закладки: 0</a> 
-      <a class="basket-link" href="">Корзина: 10</a> 
+      <a class="cart-link" href="">Корзина: 10</a> 
       <a class="order-link" href="">Оформить заказ</a>  
       <p class="header-about">Интернет-магазин строительных материалов и инструментов для ремонта    
       </p>
@@ -44,7 +44,49 @@
       </ul>    
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!--Здесь будет форма-->
+        <form class="filter" action="https://catalog.html" method="get">
+         <fieldset>
+           <legend>Производители:</legend>
+             <ul>
+               <li class="filter-option-check">
+                 <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                 <label for="filter-bosch">Bosch</label>   
+               </li>
+               <li class="filter-option-check">
+                 <input type="checkbox" name="interskol" id="filter-interskol">
+                 <label for="filter-interskol">Интерскол</label>   
+               </li>
+               <li class="filter-option-check">
+                 <input type="checkbox" name="makita" id="filter-makita" checked>
+                 <label for="filter-makita">Makita</label>   
+               </li>
+               <li class="filter-option-check">
+                 <input type="checkbox" name="dewalt" id="filter-dewalt">
+                 <label for="filter-dewalt">Dewalt</label> 
+               </li>
+               <li class="filter-option-check">
+                 <input type="checkbox" name="hitachi" id="filter-hitachi">
+                 <label for="filter-hitachi">Hitachi</label>
+               </li>     
+             </ul>  
+         </fieldset>
+         <fieldset>
+           <legend>Питание:</legend>
+           <ul>
+             <li class="filter-option-radio">
+               <label>     
+                 <input type="radio" name="product" id="group-battery" checked>Аккумуляторные
+               </label>
+             </li>
+             <li class="filter-option-radio">
+               <label>     
+                 <input type="radio" name="product" id="group-power-socket">Сетевые
+               </label>
+             </li>   
+           </ul>         
+         </fieldset> 
+         <button type="submit" class="filter-button  button">Показать</button>    
+        </form>  
       </section>
       <section class="catalog">
         <ul class="catalog-list">
@@ -98,7 +140,6 @@
               <a class="button-price" href="">12500 Р.</a>
             </p>  
           </li>
-            
           <li class="catalog-item">
             <h3>
               <a href="">
@@ -150,7 +191,6 @@
               <a class="button-price" href="">12500 Р.</a>
             </p>  
           </li>
-            
           <li class="catalog-item">
             <h3>
               <span class="new">NEW</span>   
@@ -249,5 +289,12 @@
         </p> 
       </div> 
     </footer>
+    <section class="append-cart">
+      <img src="img/icon-mark.svg" alt="Добавлено!">
+      <p> Товар добавлен в корзину!</p>  
+      <a href="">Оформить заказ</a>
+      <a href="catalog.html">Продолжить покупки</a>
+      <button class="btn-close" type="button">x</button>     
+    </section>  
   </body>
 </html>
