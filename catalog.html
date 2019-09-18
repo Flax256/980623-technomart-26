@@ -9,7 +9,10 @@
       <a class="header-logo" href="index.html">  
           <img src="img/logo-technomart.svg" alt="Логотип  «Техномарт»"> 
       </a>
-      <span class="finder-link">Поиск</span> 
+      <form action="https://echo.htmlacademy.ru"     method="post">
+        <label for="finder-field">Поиск:</label>
+        <input type="text" id="finder-field">
+      </form>  
       <a class="bookmarks-link" href="">Закладки: 0</a> 
       <a class="cart-link" href="">Корзина: 10</a> 
       <a class="order-link" href="">Оформить заказ</a>  
@@ -37,7 +40,7 @@
     <main>
       <h1 class="catalog-main">ПЕРФОРАТОРЫ</h1>    
       <ul>
-        <li><a href="index.html"></a></li>  
+        <li><a href="index.html" aria-label="Домашняя страница"></a></li>  
         <li><a href="">КАТАЛОГ</a></li> 
         <li><a href="">ИНСТРУМЕНТ</a></li>  
         <li><a>ПЕРФОРАТОРЫ</a></li>  
@@ -74,14 +77,12 @@
            <legend>Питание:</legend>
            <ul>
              <li class="filter-option-radio">
-               <label>     
-                 <input type="radio" name="product" id="group-battery" checked>Аккумуляторные
-               </label>
+               <input type="radio" name="product" id="group-battery" checked>
+             <label for="group-battery">Аккумуляторные</label>
              </li>
-             <li class="filter-option-radio">
-               <label>     
-                 <input type="radio" name="product" id="group-power-socket">Сетевые
-               </label>
+             <li class="filter-option-radio">     
+               <input type="radio" name="product" id="group-power-socket">
+               <label for="group-power-socket">Сетевые</label>
              </li>   
            </ul>         
          </fieldset> 
@@ -89,6 +90,7 @@
         </form>  
       </section>
       <section class="catalog">
+        <h2 class="visually-hidden">Каталог</h2>  
         <ul class="catalog-list">
           <li class="catalog-item">
             <h3>
@@ -294,7 +296,7 @@
       <p> Товар добавлен в корзину!</p>  
       <a href="">Оформить заказ</a>
       <a href="catalog.html">Продолжить покупки</a>
-      <button class="btn-close" type="button">x</button>     
+      <button class="btn-close" type="button" aria-label="Закрыть">x</button>     
     </section>  
   </body>
 </html>
