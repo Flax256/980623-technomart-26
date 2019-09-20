@@ -1,3 +1,4 @@
+/* Основной шрифт */
 @font-face{
 font-family: "Cuprum";
 src: 
@@ -30,6 +31,7 @@ url("../fonts/cuprumitalic.woff2") format("woff2");
 font-weight: normal;
 font-style: italic;
 }
+/* Редко встречающийся шрифт */
 @font-face{
 font-family: "PT Sans";
 src: 
@@ -46,6 +48,7 @@ url("../fonts/ptsansbold.woff2") format("woff2");
 font-weight: bold;
 font-style: normal;
 }
+/* Глобальные настройки */
 body {
   margin: 0;
   padding: 0;
@@ -53,8 +56,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   font-weight: 700
-  color: #000000;
-//  text-transform: uppercase;
+  color: #000000;    
   background-color: #ffffff;
   background-image: url("../img/bg.jpg");
   background-position: top center;
@@ -63,14 +65,24 @@ body {
 body ul {
   list-style: none;
 }
+/* Убираем подчеркивание ссылок */
+a {
+  text-decoration: none;
+}
+/* Визуализация кнопок */
 .button-white {
   font: inherit;
   text-align: center;
   color: #000000;  
   vertical-align: middle;
-//  text-transform: uppercase;
   background-color: #ffffff;
   border: none;
+}
+.button-white:hover {
+  color: #ee3643;
+}
+.button-white:focus {
+  color: #cacaca;
 }
 .button-red {
   font: inherit;
@@ -81,14 +93,7 @@ body ul {
   background-color: #ee3643;
   border: none;    
 }
-//.button:hover,
-//.button:focus,
-//.button:active {
-//  background-color: #663d15;
-}
-a {
-  text-decoration: none;
-}
+/* Блок hedera */
 .main-header {
   font-size: 17px;
   line-height: 21px;
@@ -103,11 +108,13 @@ a {
   color: #ffffff;
   background-color: #32425c;
 }
+.site-navigation a:hover {
+  background-color: #293449;
+}
 .header-top a {
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
-  background-color: #32425c;
 }
 .header-top .logo {
   display: inline-block;
@@ -118,10 +125,62 @@ a {
   line-height: 40px;
   text-align: center;
 }
-.header-top input {
-  color: white;
+.header-top .logo:hover,
+.header-top .logo:active {
+  background-color: #ca2c37;
+}
+/* Строка ввода для поиска */
+.finder input{
+  color: #ffffff;
   background-color: transparent;
-  border: 1px solid grey;
+  border: 1px solid transparent;
+}
+.finder input:hover {
+  color: #ffffff;
+  background-color: #212a3a;
+  border: 1px solid transparent;
+}
+.finder input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+.finder:hover {
+  color: #ffffff;
+  background-color: #212a3a;
+}
+/* Обрабатываем закладки */
+.bookmarks-link:hover {
+  background-color: #212a3a;
+}
+.bookmarks-link:hover {
+  background-color: #161d29;
+}
+/* Обрабатываем карзину */
+.cart-link:hover {
+  background-color: #212a3a;
+}
+.cart-link:active {
+  background-color: #161d29;
+}
+/* Не пустая корзина */
+.cart-full {
+  background-color: #ee3643;
+}
+.cart-full:hover {
+  background-color: #f9424f;
+}
+.cart-full:active {
+  background-color: #b50b17;
+}
+/* Оформление заказа */
+.order-link {
+  background-color: #63a63e;
+}
+.order-link:hover {
+  background-color: #5fbb2d;
+}
+.order-link:active {
+  background-color: #518534;
 }
 .header-about {
   font-size: 16px;    
@@ -139,21 +198,37 @@ a {
   font-size: 14px;    
   line-height: 24px;   
   font-style: normal;
-  color: #ee3643;
+  color: #32425c;
   background-color: transparent;
 }
 .login-header {
   color: #000000;
   background-color: #ffffff;
 }
+.login-header:focus {
+  color: #cacaca;
+}
 .my-order,
 .my-cabinet {
   text-decoration: underline;
+  color: #32425c;
 }
+.my-order:hover,
+.my-cabinet:hover {
+  text-decoration: underline;
+  color: #ee3643;
+}
+.my-order:focus,
+.my-cabinet:focus {
+  text-decoration: underline;
+  color: #cacaca;
+}
+/* Хлебные крошки*/
 .bread-crumbs a {
  color: #000000;
  background-color: #ffffff;
 }
+/* Настройки для фильтров */
 .company,
 .power {
   border:0 none;
@@ -164,6 +239,85 @@ a {
   line-height: 30px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
+}
+.filter-button {
+  background-color: #ffffff;
+  width: 140px;
+  height: 36px;
+  border: 1px solid #e5e5e5;
+  color: #000000;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+/* Названия товаров */
+.catalog-category,
+.catalog-item-title {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;  
+}
+/* Старая цена */
+.price-old {
+  background-color: #ffffff;
+  color: #999999;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+/* Новая цена */
+.button-price {
+  background-color: #ee3643;
+  color: #ffffff;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px; 
+}
+/* Кнопка купить */
+.button-buy {
+  background-color: #63a63e;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+}
+.button-buy:hover {
+  background-color: #5fbb2d;
+}
+.button-buy:focus {
+  background-color: #518534;
+}
+
+/* Кнопка в закладки */
+.button-bookmarks {
+  background-color: #ffffff;
+  color: #32425c;
+  font-size: 14px;
+  line-height: 18px;
+  border: 3px solid #63a63e;
+}
+.button-bookmarks:hover {
+  color: #32425c;
+  border: 3px solid #32425c;
+}
+.button-bookmarks:focus {
+  color: #c1c6ce;
+  border: 3px solid #c1c6ce;
+}
+/* Пометка NEW */
+.new {
+  background-color: #ee3643;
+  color: #ffffff;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px; 
 }
 .main-about,
 .contacts {
@@ -190,6 +344,9 @@ a {
   font-style: normal;
   color: #000000;
   background-color: transparent;   
+}
+.large-map {       
+  display: none;
 }
 .main-footer,
 .main-footer a {
@@ -223,117 +380,44 @@ a {
   border-radius: 50%;
   text-align: center;
 }
-.footer-social img {
-  
+.footer-social a:hover,
+.footer-social a:focus {
+  background-color: #ee3643;
+}
+.footer-menu1 a,
+.footer-menu2 a {
+  text-decoration: none;
+}
+.footer-menu1 a:hover,
+.footer-menu2 a:hover {
+  text-decoration: underline;
+}
+.footer-menu1 a:focus {
+  text-decoration: none;
+  color: #a4abb4;
+}
+.footer-menu2 a:focus {
+  text-decoration: none;
+  color: #ad956f;
 }
 .signature-value a {
+  text-decoration: none;
   color: #ffd180;
   background-color: transparent;
 }
-
-/*.site-navigation,
-.user-navigation {
-  list-style: none;
-}
-.site-navigation a,
-.user-navigation a {
-  color: #ffffff;
-}
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-  background-color: #242424;
-}
-.features-list {
-  list-style: none;
-}
-.feature-item {
-  text-align: center;
-}
-.feature-item he {
-  font-size: 30px;
-  line-height: 42px;
-}
-.index-columns {
-  color: #000000;
-  background-color: #f8f5f2;
-  background-image: url("../img/pattern-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
-}
-.index-columns h2 {
-  font-size: 30px;
-  line-height: 42px;
-}
-.news-list {
-  list-style: none;
-}
-.news-item time {
-  text-transform: none;
-}
-.gallery-content {
-  background-color: #cccccc;
-  border: 7px solid #ffffff;
-}
-.appointment-item input {
-  font: inherit;
-  background-color: transparent;
-  border: 2px solid #000000;
-}
-.appointment-item input:focus {
-  border-color: #663d15;
-}
-.main-footer {
-  color: #ffffff;
-  background-color: #212121;
-  background-image: url("../img/pattern-dark.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
-}
-.footer-contacts a {
-  color: #ffffff;
+.signature-value a:hover {
   text-decoration: underline;
+  color: #ffd180;
+  background-color: transparent;
 }
-.footer-contacts a:hover,
-.footer-contacts a:focus {
+.signature-value a:focus {
   text-decoration: none;
+  color: #ee3643;
+  background-color: transparent;
 }
-.footer-social {
-  text-align: center;
+.connection {
+  display: none;
 }
-.footer-social ul {
-  list-style: none;
+.append-cart {
+  display: none;
 }
-.social-button {
-  color: #ffffff;
-}
-.modal {
-  color: #000000;
-  background-color: #f8f3f0;
-  background-image: url("../img/pattern-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
-}
-.modal ul {
-  list-style: none;  
-}
-.modal h2 {
-  font-size: 30px;
-  line-height: 42px;
-}
-.login-form input[type="text"],
-.login-form input[type="password"] {
-  font: inherit;
-  color: #000000;
-  text-transform: uppercase;
-  background-color: #f9f6f3;
-  border: 2px solid #000000;
-}
-.login-form input:focus {
-  border-color: #663d15;
-}
-.login-checkbox:hover,
-.login-checkbox:focus {
-  color: #663d15;
-}*/
