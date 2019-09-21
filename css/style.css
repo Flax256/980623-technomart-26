@@ -55,7 +55,7 @@ body {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
-  font-weight: "normal";
+  font-weight: normal;
   color: #000000;    
   background-color: #ffffff;
   background-position: top center;
@@ -149,6 +149,9 @@ a {
 .finder:hover {
   color: #ffffff;
   background-color: #212a3a;
+}
+.finder input::-webkit-input-placeholder {
+  color: #ffffff;
 }
 /* Обрабатываем закладки */
 .bookmarks-link:hover {
