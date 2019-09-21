@@ -118,7 +118,8 @@ a {
 .main-navigation a {
   color: #ffffff;
 }
-.site-navigation a:hover {
+.site-navigation a:hover,
+.site-navigation a:active {
   background-color: #293449;
 }
 .header-top a {
