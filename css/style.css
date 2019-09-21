@@ -2,32 +2,32 @@
 @font-face{
 font-family: "Cuprum";
 src: 
-url("../fonts/cuprum.woff") format("woff"),
-url("../fonts/cuprum.woff2") format("woff2");
+url("../fonts/cuprum.woff2") format("woff2"),
+url("../fonts/cuprum.woff") format("woff");
 font-weight: normal;
 font-style: normal;
 }
 @font-face{
 font-family: "Cuprum";
 src: 
-url("../fonts/cuprumbold.woff") format("woff"),
-url("../fonts/cuprumbold.woff2") format("woff2");
+url("../fonts/cuprumbold.woff2") format("woff2"),
+url("../fonts/cuprumbold.woff") format("woff");
 font-weight: bold;
 font-style: normal;
 }
 @font-face{
 font-family: "Cuprum";
 src: 
-url("../fonts/cuprumbolditalic.woff") format("woff"),
-url("../fonts/cuprumbolditalic.woff2") format("woff2");
+url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+url("../fonts/cuprumbolditalic.woff") format("woff");
 font-weight: bold;
 font-style: italic;
 }
 @font-face{
 font-family: "Cuprum";
 src: 
-url("../fonts/cuprumitalic.woff") format("woff"),
-url("../fonts/cuprumitalic.woff2") format("woff2");
+url("../fonts/cuprumitalic.woff2") format("woff2"),
+url("../fonts/cuprumitalic.woff") format("woff");
 font-weight: normal;
 font-style: italic;
 }
@@ -35,16 +35,16 @@ font-style: italic;
 @font-face{
 font-family: "PT Sans";
 src: 
-url("../fonts/ptsans.woff") format("woff"),
-url("../fonts/ptsans.woff2") format("woff2");
+url("../fonts/ptsans.woff2") format("woff2"),
+url("../fonts/ptsans.woff") format("woff");
 font-weight: normal;
 font-style: normal;
 }
 @font-face{
 font-family: "PT Sans";
 src: 
-url("../fonts/ptsansbold.woff") format("woff"),
-url("../fonts/ptsansbold.woff2") format("woff2");
+url("../fonts/ptsansbold.woff2") format("woff2"),
+url("../fonts/ptsansbold.woff") format("woff");
 font-weight: bold;
 font-style: normal;
 }
@@ -53,16 +53,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 24px;
-  font-weight: 700
+  font-weight: "normal";
   color: #000000;    
   background-color: #ffffff;
-  background-image: url("../img/bg.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
-body ul {
+.no-point {
   list-style: none;
 }
 /* Убираем подчеркивание ссылок */
@@ -71,21 +70,31 @@ a {
 }
 /* Визуализация кнопок */
 .button-white {
-  font: inherit;
+  font-size: 21px;
+  line-height: 21px;
   text-align: center;
   color: #000000;  
   vertical-align: middle;
   background-color: #ffffff;
   border: none;
 }
-.button-white:hover {
+.filters .button-white {
+  border: 1px solid #e5e5e5;
+  font-family: "PT Sans", Arial, sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 12px 40px
+}
+.button-white:hover,
+.button-white:focus {
   color: #ee3643;
 }
-.button-white:focus {
+.button-white:active {
   color: #cacaca;
 }
 .button-red {
-  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
   color: #ffffff;  
   vertical-align: middle;
@@ -93,20 +102,21 @@ a {
   background-color: #ee3643;
   border: none;    
 }
-/* Блок hedera */
-.main-header {
-  font-size: 17px;
-  line-height: 21px;
-  color: #ee3643;
-  background-color: #f4f7f9;
+.button-red:hover {
+  background-color: #ca2c37;
+}
+.button-red:active {
+  background-color: #ba2732;
 }
 .main-navigation,
-.header-top,
-.main-navigation a {
+.header-top {
   font-size: 17px;
-  line-height: 21px;
+  line-height: 17px;
   color: #ffffff;
   background-color: #32425c;
+}
+.main-navigation a {
+  color: #ffffff;
 }
 .site-navigation a:hover {
   background-color: #293449;
@@ -121,9 +131,6 @@ a {
   width: 160px;
   height: 40px;    
   background-color: #ee3643;
-  font-size: 30px;    
-  line-height: 40px;
-  text-align: center;
 }
 .header-top .logo:hover,
 .header-top .logo:active {
@@ -192,14 +199,10 @@ a {
   line-height: 21px;   
   font-style: normal;
   color: #ee3643;
-  background-color: transparent;
 }
 .address {
   font-size: 14px;    
-  line-height: 24px;   
-  font-style: normal;
   color: #32425c;
-  background-color: transparent;
 }
 .login-header {
   color: #000000;
@@ -223,8 +226,16 @@ a {
   text-decoration: underline;
   color: #cacaca;
 }
+.catalog-main {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+}
 /* Хлебные крошки*/
 .bread-crumbs a {
+ font-family: "PT Sans", Arial, sans-serif;
+ line-height: 18px;
  color: #000000;
  background-color: #ffffff;
 }
@@ -239,21 +250,16 @@ a {
   line-height: 30px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
-}
-.filter-button {
-  background-color: #ffffff;
-  width: 140px;
-  height: 36px;
-  border: 1px solid #e5e5e5;
-  color: #000000;
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
   text-transform: uppercase;
 }
+.company label,
+.power label {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "PT Sans", Arial, sans-serif;
+}
 /* Названия товаров */
-.catalog-category,
-.catalog-item-title {
+.catalog-item span {
   background-color: #ffffff;
   color: #000000;
   font-family: "PT Sans", Arial, sans-serif;
@@ -286,6 +292,7 @@ a {
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 .button-buy:hover {
   background-color: #5fbb2d;
@@ -301,6 +308,7 @@ a {
   font-size: 14px;
   line-height: 18px;
   border: 3px solid #63a63e;
+  text-transform: uppercase;
 }
 .button-bookmarks:hover {
   color: #32425c;
@@ -322,8 +330,6 @@ a {
 .main-about,
 .contacts {
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;    
-  line-height: 24px;   
   font-style: normal;
   color: #000000;
   background-color: transparent;  
@@ -348,21 +354,19 @@ a {
 .large-map {       
   display: none;
 }
-.main-footer,
-.main-footer a {
+.main-footer {
   font-size: 18px;
-  line-height: 24px;
   color: #ffffff;
   background-color: #32425c;
+}
+.main-footer a {
+  color: #ffffff;
 }
 .main-footer .logo {
   display: inline-block;
   width: 160px;
   height: 50px;
-  text-align: center;
   background-color: #ee3643;
-  font-size: 30px;    
-  line-height: 40px;
 }
 .footer-menu2 a {
   color: #ffd180; 
