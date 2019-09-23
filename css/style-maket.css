@@ -48,17 +48,416 @@ url("../fonts/ptsansbold.woff") format("woff");
 font-weight: bold;
 font-style: normal;
 }
-/* Глобальные настройки */
+/* Глобальные настройки */.html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 body {
-  //margin: 0;
-  //padding: 0;
-  //font-family: "Cuprum", Arial, sans-serif;
-  //font-size: 13px;
-  //line-height: 24px;
-  //font-weight: normal;
-  //color: #000000;    
-  //background-color: #ffffff;
-  background-image: url("../img/maket-index.png");
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #000000;    
+  background-color: #ffffff;
+  //background-image: url("../img/maket-index.png");
+  background-size: 1200px auto;
   background-position: top center;
   background-repeat: no-repeat;
+  
+}
+.visually-hidden {
+  display: none;
+}
+.no-point {
+ list-style: none;   
+}
+a {
+  text-decoration: none;
+}
+/* Стандартный контейнер */
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  //border: 1px solid red;
+}
+/* Визуализация кнопок */
+.button-white {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  margin: 5px;
+  color: #000000;  
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: none;
+}
+.filters .button-white {
+  border: 1px solid #e5e5e5;
+  font-family: "PT Sans", Arial, sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 12px 40px
+}
+.button-white:hover,
+.button-white:focus {
+  color: #ee3643;
+}
+.button-white:active {
+  color: #cacaca;
+}
+.button-red {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;  
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;    
+}
+.button-red:hover {
+  background-color: #ca2c37;
+}
+.button-red:active {
+  background-color: #ba2732;
+}
+/* Начало описания заголовка */
+.top-group {
+  //display: flex;
+  //flex-direction: column;
+  background-image: url("../img/top_fone.png");
+}
+.header-top {
+  width: 100%;    
+  background-color: #32425c;    
+}
+.header-top .container {
+  display: flex;   
+  justify-content: space-between;
+  align-items: center;
+  //width: 1200px;
+  //min-height: 40px; 
+}
+/* Логотип в заголовке */
+.header-top .logo {
+  width: 220px;
+  //min-height: 40px;
+  background-color: #ee3643;
+  text-align: center;
+}
+.header-top img {
+  margin-top: 10px;
+}
+.header-top .logo:hover,
+.header-top .logo:active {
+  background-color: #ca2c37;
+}
+/* Строка ввода для поиска */
+.finder input {
+  font-size: 17px;
+  line-height: 18px;
+  width: 230px;
+  min-height: 40px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.finder input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+.finder:hover {
+  color: #ffffff;
+  background-color: #212a3a;
+}
+.finder input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+/* Обрабатываем закладки */
+.bookmarks-link {
+  font-size: 17px;
+  line-height: 18px;
+  width: 150px;
+  //min-height: 40px;
+  color: #ffffff;
+  background-color: transparent;
+  //border: 1px solid transparent;  
+}
+.bookmarks-link:hover {
+  background-color: #212a3a;
+}
+.bookmarks-link:hover {
+  background-color: #161d29;
+}
+/* Описание корзины */
+.cart-link {
+  font-size: 17px;
+  line-height: 18px;
+  padding-left: 5px;
+  width: 100px;
+  //min-height: 40px;
+  color: #ffffff;
+  background-color: transparent;
+  //border: 1px solid transparent; 
+}
+.cart-link:hover {
+  background-color: #212a3a;
+}
+.cart-link:active {
+  background-color: #161d29;
+}
+/* Не пустая корзина */
+.cart-full {
+  font-size: 17px;
+  line-height: 18px;
+  //padding: 13px;
+  padding-left: 5px;
+  width: 100px;
+  color: #ffffff;
+  //border: 1px solid transparent;
+  background-color: #ee3643;
+}
+.cart-full:hover {
+  background-color: #f9424f;
+}
+.cart-full:active {
+  background-color: #b50b17;
+}
+/* Оформление заказа */
+.order-link {
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  width: 150px;
+  padding: 13px;
+  //min-height: 44px;
+  color: #ffffff;
+  background-color: #63a63e;
+}
+  
+  
+.order-link:hover {
+  background-color: #5fbb2d;
+}
+.order-link:active {
+  background-color: #518534;
+}
+
+/* Средняя часть заголовка */
+.middle-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.header-about {
+  width: 200px;
+  font-size: 16px;    
+  line-height: 23px;
+  padding-left: 95px;
+  font-style: italic;
+  color: #ee3643;
+}
+.contacts-header {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding-top: 20px;
+}
+.phone {
+  font-size: 21px;    
+  line-height: 21px;   
+  font-style: normal;
+  font-weight: bold;
+  height: 30px;
+  width: 270px;
+  color: #ee3643;
+  border: 3px solid #ffffff;
+  text-align: center;
+  padding-top: 10px;
+}
+.address {
+  font-size: 14px;    
+  color: #32425c;
+}
+.personal {
+  display: flex;
+  width: 300px; 
+}
+.main-navigation {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  //background-color: #32425c;
+}
+.main-navigation a {
+  color: #ffffff;
+}
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+  height: 58px;
+  align-items: center;
+  background-color: #32425c;
+}
+.site-navigation a:hover {
+  background-color: #293449;
+}
+.site-navigation a:active {
+  background-color: #293449;
+  color: #a1a4a8;
+}
+
+
+
+/* Начало блока main */
+.group-company {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+.main-about {
+  width: 450px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  color: #000000;
+  background-color: transparent;  
+}
+.main-about h2{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;    
+  line-height: 30px;   
+  font-style: normal;
+  color: #000000;
+  background-color: transparent;   
+}
+.main-about ul {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;    
+  line-height: 20px;   
+  font-style: normal;
+  color: #000000;
+  background-color: transparent;   
+}
+.contacts-main {
+  width: 300px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  color: #000000;
+  background-color: transparent;  
+}
+.contacts-main h2{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;    
+  line-height: 30px;   
+  font-style: normal;
+  color: #000000;
+  background-color: transparent;   
+}
+.group-company {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Начало блока footer */
+
+.main-footer {
+  font-size: 18px;
+  margin-top: 40px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+.main-footer a {
+  color: #ffffff;
+}
+.main-footer .logo {
+  width: 220px;
+  height: 50px;
+  background-color: #ee3643;
+}
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+}
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.footer-menu1 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.footer-menu2 {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.footer-menu2 a {
+  color: #ffd180; 
+}
+.footer-menu1 a,
+.footer-menu2 a {
+  text-decoration: none;
+}
+.footer-menu1 a:hover,
+.footer-menu2 a:hover {
+  text-decoration: underline;
+}
+.footer-menu1 a:active {
+  text-decoration: none;
+  color: #a4abb4;
+}
+.footer-menu2 a:active {
+  text-decoration: none;
+  color: #ad956f;
+}
+.footer-bottom {
+ background-color: #293449;
+  font-size: 16px;    
+  line-height: 18px;  
+}
+.footer-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #212a3a;
+  border-radius: 50%;
+  text-align: center;
+}
+.footer-social a:hover,
+.footer-social a:active {
+  background-color: #ee3643;
+}
+.signature-value a {
+  text-decoration: none;
+  color: #ffd180;
+  background-color: transparent;
+}
+.signature-value a:hover {
+  text-decoration: underline;
+  color: #ffd180;
+  background-color: transparent;
+}
+.signature-value a:active {
+  text-decoration: none;
+  color: #ee3643;
+  background-color: transparent;
+}
+.connection {
+  display: none;
+}
+.append-cart {
+  display: none;
 }
