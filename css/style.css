@@ -63,7 +63,6 @@ body {
   font-weight: normal;
   color: #000000;    
   background-color: #ffffff;
-  //background-image: url("../img/maket-index.png");
   background-size: 1200px auto;
   background-position: top center;
   background-repeat: no-repeat;
@@ -83,7 +82,6 @@ a {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
-  //border: 1px solid red;
 }
 /* Визуализация кнопок */
 .button-white {
@@ -95,13 +93,6 @@ a {
   vertical-align: middle;
   background-color: #ffffff;
   border: none;
-}
-.filters .button-white {
-  border: 1px solid #e5e5e5;
-  font-family: "PT Sans", Arial, sans-serif;
-  line-height: 18px;
-  text-transform: uppercase;
-  padding: 12px 40px
 }
 .button-white:hover,
 .button-white:focus {
@@ -128,8 +119,6 @@ a {
 }
 /* Начало описания заголовка */
 .top-group {
-  //display: flex;
-  //flex-direction: column;
   background-image: url("../img/top_fone.png");
 }
 .header-top {
@@ -140,21 +129,21 @@ a {
   display: flex;   
   justify-content: space-between;
   align-items: center;
-  //width: 1200px;
-  //min-height: 40px; 
 }
 /* Логотип в заголовке */
-.header-top .logo {
+.header-top .logo,
+.header-top .logo-active {
   width: 220px;
-  //min-height: 40px;
   background-color: #ee3643;
   text-align: center;
 }
 .header-top img {
   margin-top: 11px;
 }
-.header-top .logo:hover,
-.header-top .logo:active {
+.main-footer .logo-active:hover,
+.main-footer .logo-active:active,
+.header-top .logo-active:hover,
+.header-top .logo-active:active {
   background-color: #ca2c37;
 }
 /* Строка ввода для поиска */
@@ -173,8 +162,9 @@ a {
   background-color: #ffffff;
 }
 .finder:hover {
-  color: #ffffff;
-  background-color: #212a3a;
+  /* Заготовка для иконки */
+  //color: #ffffff;
+  //background-color: #212a3a;
 }
 .finder input::-webkit-input-placeholder {
   color: #ffffff;
@@ -184,12 +174,10 @@ a {
   font-size: 17px;
   line-height: 18px;
   width: 130px;
-  //min-height: 40px;
   color: #ffffff;
   padding: 11px;
   text-align: center;
   background-color: transparent;
-  //border: 1px solid transparent;  
 }
 .bookmarks-link:hover {
   background-color: #212a3a;
@@ -197,7 +185,6 @@ a {
 .bookmarks-link:hover {
   background-color: #161d29;
 }
-
 /* Описание корзины */
 .cart-link {
   font-size: 17px;
@@ -206,10 +193,8 @@ a {
   width: 100px;
   padding: 11px;
   text-align: center;
-  //min-height: 40px;
   color: #ffffff;
   background-color: transparent;
-  //border: 1px solid transparent; 
 }
 .cart-link:hover {
   background-color: #212a3a;
@@ -221,11 +206,9 @@ a {
 .cart-full {
   font-size: 17px;
   line-height: 18px;
-  //padding: 13px;
   padding-left: 5px;
   width: 100px;
   color: #ffffff;
-  //border: 1px solid transparent;
   background-color: #ee3643;
 }
 .cart-full:hover {
@@ -241,12 +224,9 @@ a {
   text-align: center;
   width: 150px;
   padding: 13px;
-  //min-height: 44px;
   color: #ffffff;
   background-color: #63a63e;
 }
-  
-  
 .order-link:hover {
   background-color: #5fbb2d;
 }
@@ -258,7 +238,7 @@ a {
 .middle-header .container {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .header-about {
   width: 200px;
@@ -271,7 +251,6 @@ a {
   display: flex;
   flex-direction: column;
   width: 300px;
-  //padding-top: 20px;
 }
 .phone {
   font-size: 21px;    
@@ -283,23 +262,49 @@ a {
   color: #ee3643;
   border: 3px solid #ffffff;
   text-align: center;
-  //padding-top: 10px;
 }
 .address {
   font-size: 14px;    
   color: #32425c;
 }
+/* Персональные данные */
 .personal {
   display: flex;
   justify-content: space-between;
   padding: 0;
   width: 170px;
 }
+.personal-catalog {
+  width: 200px;
+}
+.login-header {
+  display: block;
+  color: #000000;
+  background-color: #ffffff;
+}
+.login-header:active {
+  color: #cacaca;
+}
+.my-order,
+.my-cabinet {
+  text-decoration: underline;
+  color: #32425c;
+}
+.my-order:hover,
+.my-cabinet:hover {
+  text-decoration: underline;
+  color: #ee3643;
+}
+.my-order:active,
+.my-cabinet:active {
+  text-decoration: underline;
+  color: #cacaca;
+}
+/* Основное меню */
 .main-navigation {
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
-  //background-color: #32425c;
 }
 .main-navigation a {
   color: #ffffff;
@@ -307,10 +312,12 @@ a {
 .site-navigation {
   display: flex;
   justify-content: space-around;
-  height: 58px;
-  padding:0;
+  height: 60px;
   align-items: center;
   background-color: #32425c;
+}
+.site-navigation a {
+  padding: 20px;
 }
 .site-navigation a:hover {
   background-color: #293449;
@@ -319,14 +326,163 @@ a {
   background-color: #293449;
   color: #a1a4a8;
 }
-
-
-
 /* Начало блока main */
+.catalog-main {
+  height: 50px;
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+  padding-top: 25px;
+  background-image: url("../img/top_fone.png");
+}
+.filters {
+  width: 200px;
+  /* Временно для сетки */
+  min-height: 877px;
+}
+.filters .button-white {
+  border: 1px solid #e5e5e5;
+  font-family: "PT Sans", Arial, sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 12px 40px
+}
+/* Хлебные крошки*/
+.bread-crumbs {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  /* Временно для сетки */
+  min-height: 17px;
+}
+.bread-crumbs a {
+  padding: 20px;
+  font-family: "PT Sans", Arial, sans-serif;
+  line-height: 18px;
+  color: #000000;
+  background-color: #ffffff;  
+}
+/* Настройки для фильтров */
+.company,
+.power {
+  border:0 none;
+}
+.company legend,
+.power legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.company label,
+.power label {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog {
+  width: 710px;
+  /* Временно для сеток */
+  min-height: 1085;
+}
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.catalog-item {
+  width: 220px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  /* Временно для ссеток */
+  min-height: 320px;
+  border: 1px solid #cacaca;
+}
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+/* Названия товаров */
+.catalog-item span {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;  
+}
+/* Старая цена */
+.price-old {
+  background-color: #ffffff;
+  color: #999999;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+/* Новая цена */
+.button-price {
+  background-color: #ee3643;
+  color: #ffffff;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px; 
+}
+/* Кнопка купить */
+.button-buy {
+  background-color: #63a63e;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.button-buy:hover {
+  background-color: #5fbb2d;
+}
+.button-buy:active {
+  background-color: #518534;
+}
+
+/* Кнопка в закладки */
+.button-bookmarks {
+  background-color: #ffffff;
+  color: #32425c;
+  font-size: 14px;
+  line-height: 18px;
+  border: 3px solid #63a63e;
+  text-transform: uppercase;
+}
+.button-bookmarks:hover {
+  color: #32425c;
+  border: 3px solid #32425c;
+}
+.button-bookmarks:active {
+  color: #c1c6ce;
+  border: 3px solid #c1c6ce;
+}
+/* Пометка NEW */
+.new {
+  background-color: #ee3643;
+  color: #ffffff;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px; 
+}
+
+
 .group-company {
   display: flex;
   justify-content: space-around;
-  //margin-top: 48px;
 }
 .main-about {
   width: 450px;
@@ -366,11 +522,7 @@ a {
   color: #000000;
   background-color: transparent;   
 }
-
-
-
 /* Начало блока footer */
-
 .main-footer {
   font-size: 18px;
   margin-top: 40px;
@@ -380,7 +532,8 @@ a {
 .main-footer a {
   color: #ffffff;
 }
-.main-footer .logo {
+.main-footer .logo,
+.main-footer .logo-active {
   width: 220px;
   height: 50px;
   background-color: #ee3643;
@@ -479,9 +632,3 @@ a {
   color: #ee3643;
   background-color: transparent;
 }
-//.connection {
-//  display: none;
-//}
-//.append-cart {
-//  display: none;
-//}
