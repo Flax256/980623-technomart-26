@@ -48,11 +48,12 @@ url("../fonts/ptsansbold.woff") format("woff");
 font-weight: bold;
 font-style: normal;
 }
-/* Глобальные настройки */.html {
-    box-sizing: border-box;
+/* Глобальные настройки */
+.html {
+  box-sizing: border-box;
 }
 *, *::before, *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 body {
   margin: 0;
@@ -63,13 +64,12 @@ body {
   font-weight: normal;
   color: #000000;    
   background-color: #ffffff;
-  background-size: 1200px auto;
-  background-position: top center;
-  background-repeat: no-repeat;
-  
 }
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
 }
 .no-point {
  list-style: none;   
@@ -118,8 +118,10 @@ a {
   background-color: #ba2732;
 }
 /* Начало описания заголовка */
-.top-group {
-  background-image: url("../img/top_fone.png");
+.main-header {
+  padding-bottom: 60px;
+  background-color: #f3f7f9; 
+  border: 1px solid transparent;
 }
 .header-top {
   width: 100%;    
@@ -137,8 +139,18 @@ a {
   background-color: #ee3643;
   text-align: center;
 }
-.header-top img {
-  margin-top: 11px;
+.logo-top {
+ padding: 7px;
+}
+.logo-bottom {
+  padding: 15px 40px;
+}
+/* Логотип в подвале */
+.main-footer .logo,
+.main-footer .logo-active {
+  width: 220px;
+  height: 60px;
+  background-color: #ee3643;
 }
 .main-footer .logo-active:hover,
 .main-footer .logo-active:active,
@@ -151,9 +163,8 @@ a {
   font-size: 17px;
   line-height: 18px;
   width: 235px;
-  min-height: 40px;
   color: #ffffff;
-  padding: 0 11px;
+  padding: 12px;
   background-color: transparent;
   border: 1px solid transparent;
 }
@@ -162,9 +173,8 @@ a {
   background-color: #ffffff;
 }
 .finder:hover {
-  /* Заготовка для иконки */
-  //color: #ffffff;
-  //background-color: #212a3a;
+  color: #ffffff;
+  background-color: #212a3a;
 }
 .finder input::-webkit-input-placeholder {
   color: #ffffff;
@@ -175,7 +185,7 @@ a {
   line-height: 18px;
   width: 130px;
   color: #ffffff;
-  padding: 11px;
+  padding: 13px;
   text-align: center;
   background-color: transparent;
 }
@@ -191,7 +201,7 @@ a {
   line-height: 18px;
   padding-left: 5px;
   width: 100px;
-  padding: 11px;
+  padding: 13px;
   text-align: center;
   color: #ffffff;
   background-color: transparent;
@@ -207,7 +217,9 @@ a {
   font-size: 17px;
   line-height: 18px;
   padding-left: 5px;
-  width: 100px;
+  padding: 13px;
+  text-align: center;
+  width: 101px;
   color: #ffffff;
   background-color: #ee3643;
 }
@@ -238,7 +250,7 @@ a {
 .middle-header .container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  padding: 20px 0;
 }
 .header-about {
   width: 200px;
@@ -259,9 +271,10 @@ a {
   font-weight: bold;
   height: 30px;
   width: 270px;
+  text-align: center;
+  padding-top: 10px;
   color: #ee3643;
   border: 3px solid #ffffff;
-  text-align: center;
 }
 .address {
   font-size: 14px;    
@@ -311,12 +324,21 @@ a {
 }
 .site-navigation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
   height: 60px;
   align-items: center;
+  background-color: transparent;
+}
+.site-navigation li {
   background-color: #32425c;
+  flex-grow: 1;
+  text-align: center;
+  height: 100%;
 }
 .site-navigation a {
+  display: block;
   padding: 20px;
 }
 .site-navigation a:hover {
@@ -334,10 +356,11 @@ a {
   color: #32425c;
   text-transform: uppercase;
   padding-top: 25px;
-  background-image: url("../img/top_fone.png");
+  padding-left: 30px;
+  background-color: #f3f7f9;
 }
 .filters {
-  width: 200px;
+  width: 160px;
   /* Временно для сетки */
   min-height: 877px;
 }
@@ -353,16 +376,18 @@ a {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-bottom: 50px;
-  /* Временно для сетки */
-  min-height: 17px;
+  padding-top: 20px;
 }
 .bread-crumbs a {
-  padding: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
   font-family: "PT Sans", Arial, sans-serif;
   line-height: 18px;
   color: #000000;
-  background-color: #ffffff;  
+  background-color: #ffffff; 
+}
+.bread-crumbs li:nth-child(4) a {
+  opacity: 0.5;
 }
 /* Настройки для фильтров */
 .company,
@@ -399,18 +424,25 @@ a {
   margin: 0;
 }
 .catalog-item {
-  width: 220px;
+  display: flex;
+  flex-direction: column;
+  width: 218px;
   margin-bottom: 20px;
   margin-right: 20px;
   /* Временно для ссеток */
-  min-height: 320px;
+  height: 317px;
   border: 1px solid #cacaca;
 }
 .catalog-item:nth-child(3n) {
   margin-right: 0;
 }
+.catalog-item img {
+  width: 218px;
+  height: 170px;
+  order: -1; 
+}
 /* Названия товаров */
-.catalog-item span {
+.product {
   background-color: #ffffff;
   color: #000000;
   font-family: "PT Sans", Arial, sans-serif;
@@ -429,7 +461,7 @@ a {
   line-height: 18px;
 }
 /* Новая цена */
-.button-price {
+.price {
   background-color: #ee3643;
   color: #ffffff;
   font-family: "PT Sans", Arial, sans-serif;
@@ -478,11 +510,10 @@ a {
   font-size: 18px;
   line-height: 20px; 
 }
-
-
 .group-company {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 40px;
 }
 .main-about {
   width: 450px;
@@ -525,18 +556,12 @@ a {
 /* Начало блока footer */
 .main-footer {
   font-size: 18px;
-  margin-top: 40px;
+
   color: #ffffff;
   background-color: #32425c;
 }
 .main-footer a {
   color: #ffffff;
-}
-.main-footer .logo,
-.main-footer .logo-active {
-  width: 220px;
-  height: 50px;
-  background-color: #ee3643;
 }
 .main-footer .container {
   display: flex;
@@ -586,12 +611,14 @@ a {
 }
 .footer-bottom .container {
   display: flex;
+  padding-top: 20px;
   
   font-size: 16px;    
   line-height: 18px;  
 }
 .copyright {
   width: 250px;
+
 }
 .footer-social {
   display: flex;
