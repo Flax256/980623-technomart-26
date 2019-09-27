@@ -49,7 +49,7 @@ font-weight: bold;
 font-style: normal;
 }
 /* Глобальные настройки */
-.html {
+html {
   box-sizing: border-box;
 }
 *, *::before, *::after {
@@ -69,7 +69,11 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
-  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .no-point {
  list-style: none;   
@@ -121,16 +125,16 @@ a {
 .main-header {
   padding-bottom: 60px;
   background-color: #f3f7f9; 
-  border: 1px solid transparent;
 }
 .header-top {
   width: 100%;    
   background-color: #32425c;    
 }
 .header-top .container {
-  display: flex;   
+  display: flex;  
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 /* Логотип в заголовке */
 .header-top .logo,
@@ -162,7 +166,7 @@ a {
 .finder input {
   font-size: 17px;
   line-height: 18px;
-  width: 235px;
+  width: 250px;
   color: #ffffff;
   padding: 12px;
   background-color: transparent;
@@ -185,6 +189,7 @@ a {
   line-height: 18px;
   width: 130px;
   color: #ffffff;
+  margin-left: auto;
   padding: 13px;
   text-align: center;
   background-color: transparent;
@@ -263,13 +268,14 @@ a {
   display: flex;
   flex-direction: column;
   width: 300px;
+  margin-left: 130px;
 }
 .phone {
   font-size: 21px;    
   line-height: 21px;   
   font-style: normal;
   font-weight: bold;
-  height: 30px;
+  height: 50px;
   width: 270px;
   text-align: center;
   padding-top: 10px;
@@ -285,10 +291,12 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 0;
+  margin-left: auto;
   width: 170px;
 }
 .personal-catalog {
   width: 200px;
+  margin-left: auto;
 }
 .login-header {
   display: block;
@@ -314,7 +322,8 @@ a {
   color: #cacaca;
 }
 /* Основное меню */
-.main-navigation {
+.main-navigation .container {
+  padding: 0;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -426,7 +435,7 @@ a {
 .catalog-item {
   display: flex;
   flex-direction: column;
-  width: 218px;
+  width: 220px;
   margin-bottom: 20px;
   margin-right: 20px;
   /* Временно для ссеток */
@@ -436,10 +445,15 @@ a {
 .catalog-item:nth-child(3n) {
   margin-right: 0;
 }
-.catalog-item img {
+.product-image {
+  order: -1;
   width: 218px;
   height: 170px;
-  order: -1; 
+}
+.product-image img {
+  width: 100%;
+  max-height: 100%;
+  height: auto;
 }
 /* Названия товаров */
 .product {
@@ -555,8 +569,6 @@ a {
 }
 /* Начало блока footer */
 .main-footer {
-  font-size: 18px;
-
   color: #ffffff;
   background-color: #32425c;
 }
@@ -564,7 +576,9 @@ a {
   color: #ffffff;
 }
 .main-footer .container {
+  font-size: 18px;
   display: flex;
+  padding: 0;
   justify-content: space-between;
 }
 .contacts-footer {
