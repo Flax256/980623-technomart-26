@@ -30,8 +30,10 @@
           </div>
           <div class="personal-catalog">
             <a class="button-white login-header" href="">Равшан Джамшутович</a>
-            <a class="my-order" href="">Мои заказы</a> 
-            <a class="my-cabinet" href="">Личный кабинет</a> 
+            <div class="my-personal">
+              <a class="my-order" href="">Мои заказы</a> 
+              <a class="my-cabinet" href="">Личный кабинет</a> 
+            </div>
           </div> 
         </div>      
       </div>
@@ -54,7 +56,7 @@
         <li><a class="home" href="index.html" aria-label="Домашняя страница"></a></li>  
         <li><a href="">КАТАЛОГ</a></li> 
         <li><a href="">ИНСТРУМЕНТ</a></li>  
-        <li><a>ПЕРФОРАТОРЫ</a></li>  
+        <li class="breadcrumbs-current">ПЕРФОРАТОРЫ</li>  
       </ul>
       <h1 class="catalog-main">Перфораторы</h1> 
       <div class="catalog-columns">
@@ -64,24 +66,24 @@
             <fieldset class="company">
               <legend>Производители:</legend>
               <ul class="no-point">
-                <li class="filter-option-check">
-                  <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
                   <label for="filter-bosch">Bosch</label>   
                 </li>
-                <li class="filter-option-check">
-                  <input type="checkbox" name="interskol" id="filter-interskol">
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
                   <label for="filter-interskol">Интерскол</label>   
                 </li>
-                <li class="filter-option-check">
-                  <input type="checkbox" name="makita" id="filter-makita" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
                   <label for="filter-makita">Makita</label>   
                 </li>
-                <li class="filter-option-check">
-                  <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
                   <label for="filter-dewalt">Dewalt</label> 
                 </li>
-                <li class="filter-option-check">
-                  <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
                   <label for="filter-hitachi">Hitachi</label>
                 </li>     
               </ul>  
@@ -89,12 +91,12 @@
             <fieldset class="power">
               <legend>Питание:</legend>
               <ul class="no-point">
-                <li class="filter-option-radio">
-                  <input type="radio" name="product" id="group-battery" checked>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product" id="group-battery" checked>
                   <label for="group-battery">Аккумуляторные</label>
                 </li>
-                <li class="filter-option-radio">     
-                  <input type="radio" name="product" id="group-power-socket">
+                <li class="filter-option">     
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product" id="group-power-socket">
                   <label for="group-power-socket">Сетевые</label>
                 </li>   
               </ul>         
@@ -130,7 +132,8 @@
                 <a class="button-bookmarks" href="">В закладки</a>        
               </p>
               <span class="brend">Перфоратор BOSH</span>
-              <span class="product">«BFG 2000»</span>        
+              <span class="product">«BFG 2000»</span>  
+              <s class="price-old no-vision"></s>
               <span class="price">12500 Р.</span> 
             </li>
             <li class="catalog-item">
@@ -157,7 +160,8 @@
                 <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 2000»">
               </div>
               <span class="brend">Перфоратор BOSH</span>
-              <span class="product">«BFG 2000»</span>         
+              <span class="product">«BFG 2000»</span> 
+              <s class="price-old no-vision"></s>
               <span class="price">12500 Р.</span>  
             </li>
             <li class="catalog-item">
@@ -184,7 +188,8 @@
                 <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 2000»">
               </div> 
               <span class="brend">Перфоратор BOSH</span>
-              <span class="product">«BFG 2000»</span>       
+              <span class="product">«BFG 2000»</span>
+              <s class="price-old no-vision"></s>
               <span class="price">12500 Р.</span>  
             </li>    
           </ul>
@@ -245,7 +250,7 @@
         </div>
       </div>      
     </footer>
-    <section class="append-cart visually-hidden">
+    <section class="append-cart">
       <img src="img/icon-mark.svg" alt="Добавлено!">
       <p> Товар добавлен в корзину!</p>  
       <a href="">Оформить заказ</a>
