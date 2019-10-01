@@ -149,7 +149,7 @@ a {
   box-shadow: 0 5px 0 0 #b52933;
 }
 .header-top img {
-  padding: 12px 42px 3px 42px;
+  padding: 10px 42px 2px 42px;
 }
 /* Логотип в подвале */
 .main-footer .logo,
@@ -172,7 +172,7 @@ a {
   line-height: 18px;
   width: 250px;
   color: #ffffff;
-  padding: 12px;
+  padding: 11px;
   padding-left: 40px;
   background-color: transparent;
   border: 1px solid transparent;
@@ -203,10 +203,9 @@ a {
   position: relative;
   font-size: 17px;
   line-height: 18px;
-  width: 140px;
   color: #ffffff;
   margin-left: auto;
-  padding: 13px;
+  padding: 12px 36px 12px 36px;
   text-align: center;
   background-color: transparent;
   opacity: 0.5;
@@ -224,7 +223,7 @@ a {
   width: 14px;
   height: 16px;
   top: 13px;
-  left: 10px;
+  left: 13px;
   content: "";
   background-image: url("../img/icon-bookmark.svg");
   background-repeat: no-repeat;
@@ -235,9 +234,7 @@ a {
   position: relative;
   font-size: 17px;
   line-height: 18px;
-  padding-left: 5px;
-  width: 160px;
-  padding: 13px;
+  padding: 12px 40px;
   text-align: center;
   color: #ffffff;
   background-color: transparent;
@@ -256,7 +253,7 @@ a {
   width: 15px;
   height: 15px;
   top: 13px;
-  left: 16px;
+  left: 14px;
   content: "";
   background-image: url("../img/icon-cart.svg");  
   background-repeat: no-repeat;
@@ -267,10 +264,8 @@ a {
   position: relative;
   font-size: 17px;
   line-height: 18px;
-  padding-left: 5px;
-  padding: 13px;
+  padding: 12px 40px;
   text-align: center;
-  width: 160px;
   color: #ffffff;
   background-color: #f9424f;
   opacity: 0.8;
@@ -286,7 +281,7 @@ a {
   width: 15px;
   height: 15px;
   top: 13px;
-  left: 16px;
+  left: 14px;
   content: "";
   background-image: url("../img/icon-cart.svg");  
   background-repeat: no-repeat;
@@ -297,8 +292,7 @@ a {
   font-size: 17px;
   line-height: 18px;
   text-align: center;
-  width: 150px;
-  padding: 13px;
+  padding: 12px 21px;
   color: #ffffff;
   background-color: #5fbb2d;
   opacity: 0.8;
@@ -339,10 +333,8 @@ a {
   line-height: 21px;   
   font-style: normal;
   font-weight: bold;
-  height: 50px;
-  width: 270px;
+  padding: 9px 56px;
   text-align: center;
-  padding-top: 10px;
   color: #ee3643;
   border: 3px solid #ffffff;
 }
@@ -350,8 +342,8 @@ a {
   position: absolute;
   width: 19px;
   height: 19px;
-  top: 13px;
-  left: 18px;
+  top: 10px;
+  left: 26px;
   content: "";
   background-image: url("../img/icon-phone.svg");  
   background-repeat: no-repeat;
@@ -373,14 +365,14 @@ a {
 }
 .comein {
   position: relative;
-  width: 122px;
+  padding: 10px 37px;
   margin-left: 18px; 
 }
 .comein::before {
   position: absolute;
   width: 20px;
   height: 17px;
-  top: 13px;
+  top: 11px;
   left: 10px;
   content: "";
   background-image: url("../img/icon-login.svg");  
@@ -393,8 +385,7 @@ a {
   opacity: 0.3;
 }
 .registration {
-  width: 150px;
-  
+  padding: 10px 24px;  
 }
 .personal-catalog {
   width: 300px;
@@ -402,8 +393,7 @@ a {
 }
 .login-header {
   position: relative;
-  width: 300px;
-  display: block;
+  padding: 12px 0;
   color: #000000;
   background-color: #ffffff;
 }
@@ -428,7 +418,7 @@ a {
   position: absolute;
   width: 21px;
   height: 17px;
-  top: 13px;
+  top: 15px;
   right: 18px;
   content: "";
   background-image: url("../img/icon-logout.svg");  
@@ -483,9 +473,6 @@ a {
   line-height: 17px;
   color: #ffffff;
 }
-.main-navigation a {
-  color: #ffffff;
-}
 .site-navigation {
   display: flex;
   justify-content: space-between;
@@ -497,13 +484,14 @@ a {
 }
 .site-navigation li {
   background-color: #32425c;
-  border-bottom: 5px solid #000000;
+  border-bottom: 5px solid #293449;
   flex-grow: 1;
   text-align: center;
   height: 100%;
 }
 .site-navigation a {
   display: block;
+  color: #ffffff;
   padding: 18px;
 }
 .site-navigation a:hover {
@@ -523,18 +511,6 @@ a {
   padding-top: 30px;
   padding-left: 30px;
   background-color: #f3f7f9;
-}
-.filters {
-  width: 200px;
-  min-height: 877px;
-}
-.filters .button-white {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  padding: 8px 39px;
-  border: 1px solid #e5e5e5;
-  text-transform: uppercase;
 }
 /* Хлебные крошки*/
 .breadcrumbs {
@@ -567,7 +543,7 @@ a {
   position: absolute;
   width: 15px;
   height: 12px;
-  top: 3px;
+  top: 2px;
   left: 0px;
   content: "";
   background-image: url("../img/icon-home.svg");  
@@ -575,8 +551,18 @@ a {
   background-position: 0 0;
 }
 .home::after {
-  width: 20px;
-  height: 3px;
+display: none;
+position: absolute;
+content: "";
+width: 15px;
+height: 1px;
+top: 15px;
+left: 1px;
+background-color: black;
+background-position: 0 0;
+}
+.home:hover::after {
+display: block;
 }
 .breadcrumbs li::after { 
   position: absolute;
@@ -603,6 +589,18 @@ a {
   line-height: 30px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
+  text-transform: uppercase;
+}
+.filters {
+  width: 200px;
+  min-height: 877px;
+}
+.filters .button-white {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 8px 39px;
+  border: 1px solid #e5e5e5;
   text-transform: uppercase;
 }
 .filter ul {
@@ -783,7 +781,7 @@ a {
 /* Кнопка купить */
 .button-buy {
   display: block;
-  padding: 7px 26px;
+  padding: 7px 27px;
   text-align: center;
   background-color: #63a63e;
   color: #ffffff;
@@ -802,7 +800,7 @@ a {
 /* Кнопка в закладки */
 .button-bookmarks {
   display: block;
-  padding: 7px 32px;
+  padding: 7px 33px;
   text-align: center;
   margin-top: 8px;
   margin-bottom: 39px;
@@ -825,7 +823,7 @@ a {
   display: flex;
   justify-content: space-between;
   min-height: 520px;
-  padding: 48px 0 80px 0;
+  padding: 48px 0 86px 0;
 }
 .main-about {
   display: flex;
@@ -854,7 +852,6 @@ a {
   line-height: 20px;
   margin-top: 0;
   padding-left: 37px;
-  //margin-bottom: 30px;
   font-style: normal;
   color: #000000;
   background-color: transparent;   
@@ -921,8 +918,8 @@ a {
   color: #ffffff;
 }
 .main-footer .container {
-  font-size: 18px;
   display: flex;
+  font-size: 18px;
   padding: 0;
   justify-content: space-between;
 }
@@ -930,6 +927,10 @@ a {
   display: flex;
   flex-direction: column;
   width: 340px;
+}
+.footer-address {
+  padding-top: 14px;
+  padding-bottom: 31px
 }
 .footer-navigation {
   display: flex;
@@ -939,7 +940,7 @@ a {
 .footer-menu1 {
   display: flex;
   justify-content: space-between;
-  padding-left: 20px;
+  padding: 19px 0 0 20px; 
 }
 .footer-menu2 {
   display: flex;
@@ -986,8 +987,7 @@ a {
 .footer-social a {
   display: block;
   position: relative;
-  width: 42px;
-  height: 42px;
+  padding: 20px 20px;
   background-color: #212a3a;
   border-radius: 50%;
   text-align: center;
@@ -1030,11 +1030,11 @@ a {
   background-position: 0 0;
 }
 .signature {
-  padding: 0;
+  padding-top: 17px;
   margin: 0;
 }
 .signature-value {
-  padding: 0;
+  padding-bottom: 34px;
   margin:0;
 }
 .signature-value a {
