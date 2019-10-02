@@ -136,7 +136,8 @@ a {
   background-color: #32425c;    
 }
 .header-top .container {
-  display: flex;  
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0;
@@ -307,6 +308,7 @@ a {
 /* Средняя часть заголовка */
 .middle-header .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 47px;
   padding-bottom: 16px;
@@ -356,6 +358,7 @@ a {
 /* Персональные данные */
 .personal {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   margin: 0;
@@ -432,6 +435,7 @@ a {
 }
 .my-personal {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 242px;
   font-size: 16px;
@@ -475,6 +479,7 @@ a {
 }
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   margin: 0;
@@ -515,18 +520,23 @@ a {
 /* Хлебные крошки*/
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 358px;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-.breadcrumbs li {
+.breadcrumbs li  {
   position: relative;
   font-family: "PT Sans", Arial, sans-serif;
   line-height: 18px;
   color: #000000;
-  background-color: #ffffff; 
+}
+.breadcrumbs a {
+  font-family: "PT Sans", Arial, sans-serif;
+  line-height: 18px;
+  color: #000000;
 }
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
@@ -682,8 +692,6 @@ display: block;
   color: #000000;
   opacity: 0.2;
 }
-
-
 .catalog-columns {
   display: flex;
   justify-content: space-between;
@@ -700,6 +708,8 @@ display: block;
 }
 .catalog-item {
   display: flex;
+  flex-wrap: wrap;
+  position: relative;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -723,11 +733,13 @@ display: block;
   background-image: url("../img/new-flag.png");
   background-repeat: no-repeat;
   margin-left: auto;
+  overflow: hidden;
+  z-index: 20;
 }
 .product-image {
+  order: -1;
   width: 218px;
   height: 170px;
-  margin-bottom: auto;
 }
 .product-image img {
   width: 100%;
@@ -735,13 +747,21 @@ display: block;
   height: auto;
 }
 /* Названия товаров */
+.name-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 11px;
+  margin-bottom: auto;
+}
 .brend {
   background-color: #ffffff;
   color: #000000;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
-  line-height: 20px; 
+  line-height: 18px;
 }
 .product {
   background-color: #ffffff;
@@ -749,9 +769,8 @@ display: block;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 18px;
   text-transform: uppercase; 
-  margin-bottom: 18px;
 }
 /* Старая цена */
 .price-old {
@@ -763,7 +782,7 @@ display: block;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 /* Новая цена */
 .price {
@@ -776,40 +795,54 @@ display: block;
   font-size: 17px;
   line-height: 38px;
   text-align: center;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
 }
-/* Кнопка купить */
-.button-buy {
+/* Всплывающий раздел карточки */
+.catalog-item-buy {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 10;
+}
+/* Кнопки купить и в закладки*/
+.button-buy,
+.button-bookmarks {
   display: block;
-  padding: 7px 27px;
-  text-align: center;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
   background-color: #63a63e;
-  color: #ffffff;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius:3px;
+  text-align: center;
+  color: white;
   font-size: 14px;
+  font-weight: normal;
+  font-family: "Cuprum", sans-serif;
   line-height: 18px;
+  text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 3px solid #367315; 
+}
+.button-bookmarks {
+  color: #32425c;
+  background: white;
+  border-bottom-color: #63a63e;
+}
+.catalog-item:hover .catalog-item-buy {
+  display: block;
 }
 .button-buy:hover {
   background-color: #5fbb2d;
 }
 .button-buy:active {
   background-color: #518534;
-}
-
-/* Кнопка в закладки */
-.button-bookmarks {
-  display: block;
-  padding: 7px 33px;
-  text-align: center;
-  margin-top: 8px;
-  margin-bottom: 39px;
-  background-color: #ffffff;
-  color: #32425c;
-  font-size: 14px;
-  line-height: 18px;
-  border: 3px solid #63a63e;
-  text-transform: uppercase;
 }
 .button-bookmarks:hover {
   color: #32425c;
@@ -827,6 +860,7 @@ display: block;
 }
 .main-about {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
   width: 540px;
@@ -876,6 +910,7 @@ display: block;
 }
 .contacts-main {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
   width: 300px;
@@ -925,6 +960,7 @@ display: block;
 }
 .contacts-footer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 340px;
 }
@@ -939,11 +975,13 @@ display: block;
 }
 .footer-menu1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 19px 0 0 20px; 
 }
 .footer-menu2 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
  
 }
@@ -971,6 +1009,7 @@ display: block;
 }
 .footer-bottom .container {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 20px;
   
   font-size: 16px;    
@@ -982,12 +1021,14 @@ display: block;
 }
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
 }
 .footer-social a {
   display: block;
   position: relative;
   padding: 20px 20px;
+  margin-right: 4px;
   background-color: #212a3a;
   border-radius: 50%;
   text-align: center;
@@ -1052,12 +1093,8 @@ display: block;
   color: #ee3643;
   background-color: transparent;
 }
-
 .connection,
 .append-cart,
 .large-map {
   display: none;
-}
-.no-vision {
-  visibility: hidden;
 }
