@@ -110,6 +110,7 @@ a {
 }
 .button-white:active {
   color: #cacaca;
+  //color: rgba(255,255,255,0.3);
 }
 .button-red {
   font-size: 14px;
@@ -259,6 +260,7 @@ a {
   background-image: url("../img/icon-cart.svg");  
   background-repeat: no-repeat;
   background-position: 0 0;
+  
 }
 /* Не пустая корзина */
 .cart-full {
@@ -381,8 +383,12 @@ a {
   background-image: url("../img/icon-login.svg");  
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
 }
-.comein:hover.comein::before,
+.comein:hover.comein::before
+{
+  opacity: 1;
+}
 .comein:active.comein::before
 {
   opacity: 0.3;
@@ -403,7 +409,8 @@ a {
 .login-header:active,
 .login-header:active::before,
 .login-header:active::after {
-  opacity: 0.3;
+  color: red;
+  //opacity: 0.3;
 }
 .login-header::before {
   position: absolute;
@@ -428,6 +435,9 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
+}
+.login-header:hover {
+  color: #000000;
 }
 .login-header:hover::before,
 .login-header:hover::after {
@@ -486,10 +496,10 @@ a {
   height: 60px;
   align-items: center;
   background-color: transparent;
+  border-bottom: 5px solid #293449;
 }
 .site-navigation li {
   background-color: #32425c;
-  border-bottom: 5px solid #293449;
   flex-grow: 1;
   text-align: center;
   height: 100%;
@@ -497,7 +507,7 @@ a {
 .site-navigation a {
   display: block;
   color: #ffffff;
-  padding: 18px;
+  padding: 21px;
 }
 .site-navigation a:hover {
   background-color: #293449;
@@ -559,20 +569,6 @@ a {
   background-image: url("../img/icon-home.svg");  
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-.home::after {
-display: none;
-position: absolute;
-content: "";
-width: 15px;
-height: 1px;
-top: 15px;
-left: 1px;
-background-color: black;
-background-position: 0 0;
-}
-.home:hover::after {
-display: block;
 }
 .breadcrumbs li::after { 
   position: absolute;
@@ -878,6 +874,7 @@ display: block;
   font-style: normal;
   text-transform: uppercase;
   color: #000000;
+  font-weight: bold;
   background-color: transparent;   
 }
 .transport-company {
@@ -927,6 +924,7 @@ display: block;
   font-style: normal;
   text-transform: uppercase;
   color: #000000;
+  font-weight: bold;
   background-color: transparent;   
 }
 .contacts-img {
