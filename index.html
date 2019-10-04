@@ -78,9 +78,9 @@
         </div>
       </div>
       <section class="large-map">
-        <p>
+        <div class="map-container">
           <img src="img/big-map.png"  width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"> 
-        </p>
+        </div>
         <button class="btn-close" type="button" aria-label="Закрыть">x</button>
       </section>         
     </main>
@@ -140,7 +140,7 @@
     </footer>
     <section class="connection"> 
       <h2 class="visually-hidden">Заблудились? Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="connection-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="connection-name">Ваше имя:</label>     
           <input id="connection-name" type="text" name="name" value="" placeholder="Имя Фамилия">
@@ -153,8 +153,12 @@
           <label for="connection-text">Текст письма:</label> 
           <textarea id="connection-text" rows="10" cols="45" name="text" placeholder="В свободной форме"></textarea>
         </p>
-        <button type="submit" aria-label="Отправить письмо">Отправить</button>  
-        <button class="btn-close" type="button" aria-label="Закрыть">x</button> 
+        <div class="connection-bottom">
+          <button class="send" type="submit" aria-label="Отправить письмо">Отправить</button>
+        </div>  
+        <button class="btn-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button> 
       </form>
     </section>   
   </body>
