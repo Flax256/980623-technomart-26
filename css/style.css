@@ -578,10 +578,14 @@ a {
 }
 .breadcrumbs li::after { 
   position: absolute;
-  width: 15px;
+  content: "";
+  width: 8px;
   height: 12px;
-  right: -33px ;
-  content: ">";
+  right: -25px;
+  top: 2px;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   font-size: 20px;
   opacity: 0.5
 }
