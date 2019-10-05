@@ -14,9 +14,9 @@
             <img class="logo-top" src="img/logo-technomart.svg" alt="Логотип «Техномарт»"> 
           </a>
           <form class="finder" action="https://echo.htmlacademy.ru" method="post">
-            <label>
-              <input type="text" id="finder-field" placeholder="Поиск:" aria-label="Строка для поиска">
-            </label>
+            <label aria-label="Строка для поиска">
+              <input type="text" id="finder-field" placeholder="Поиск:">
+            </label> 
           </form>      
           <a class="bookmarks-link" href="">Закладки: 0</a>  
           <a class="cart-full" href="">Корзина: 10</a> 
@@ -302,12 +302,22 @@
         </div>
       </div>      
     </footer>
-    <section class="append-cart">
-      <img src="img/icon-mark.svg" alt="Добавлено!">
-      <p> Товар добавлен в корзину!</p>  
-      <a href="">Оформить заказ</a>
-      <a href="catalog.html">Продолжить покупки</a>
-      <button class="btn-close" type="button" aria-label="Закрыть">x</button>     
+    <section class="modal append-cart">
+      <div class="ready container-modal">
+        <div class="ok">
+          <img src="img/icon-mark.svg" alt="Добавлено!">
+        </div>  
+        <div> Товар добавлен в корзину!</div> 
+      </div>  
+      <div class="connection-bottom">
+        <div class="container-modal">
+          <div class="send-columns">
+            <a class="send-order" href="">Оформить заказ</a>
+            <a class="send-buy" href="catalog.html">Продолжить покупки</a>
+          </div>
+        </div>  
+      </div>
+      <button class="btn-close" type="button" aria-label="Закрыть сообщение о корзине"></button>
     </section>  
   </body>
 </html>

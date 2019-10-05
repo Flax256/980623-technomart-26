@@ -179,19 +179,20 @@ a {
   color: rgba(255, 255, 255, 1);
   opacity: 1;
 }
-.finder input:focus {
-  color: #000000;
-  background-color: #ffffff;
-  background-image: url("../img/icon-search-red.svg");
-  background-repeat: no-repeat;
-  background-position: 10px 10px;
-}
 .finder input:hover {
   color: #ffffff;
   background-color: #212a3a;
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 10px 10px;
+}
+.finder input:focus {
+  color: #000000;
+  background-color: #ffffff;
+  background-image: url("../img/icon-search-red.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  outline: none;
 }
 /* Обрабатываем закладки */
 .bookmarks-link {
@@ -220,6 +221,12 @@ a {
   background-image: url("../img/icon-bookmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
+}
+.bookmarks-link:hover::before {
+  opacity: 1;
+}
+.bookmarks-link:active::before {
   opacity: 0.5;
 }
 /* Описание корзины */
@@ -248,6 +255,12 @@ a {
   background-image: url("../img/icon-cart.svg");  
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
+}
+.cart-link:hover::before {
+  opacity: 1;
+}
+.cart-link:active::before {
   opacity: 0.5;
 }
 /* Не пустая корзина */
@@ -277,6 +290,12 @@ a {
   background-image: url("../img/icon-cart.svg");  
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
+}
+.cart-full:hover::before {
+  opacity: 1;
+}
+.cart-full:active::before {
   opacity: 0.5;
 }
 /* Оформление заказа */
@@ -722,7 +741,7 @@ a {
   background-repeat: no-repeat;
   margin-left: auto;
   overflow: hidden;
-  z-index: 20;
+  z-index: 10;
 }
 .product-image {
   order: -1;
@@ -795,7 +814,7 @@ a {
   min-height: 88px;
   padding: 40px 0;
   background-color: #ffffff;
-  z-index: 10;
+  z-index: 5;
 }
 /* Кнопки купить и в закладки*/
 .button-buy,
@@ -866,7 +885,7 @@ a {
   font-style: normal;
   text-transform: uppercase;
   color: #000000;
-  font-weight: bold;
+  font-weight: normal;
   background-color: transparent;   
 }
 .transport-company {
@@ -916,7 +935,7 @@ a {
   font-style: normal;
   text-transform: uppercase;
   color: #000000;
-  font-weight: bold;
+  font-weight: normal;
   background-color: transparent;   
 }
 .contacts-img {
@@ -1083,38 +1102,42 @@ a {
   color: #ee3643;
   background-color: transparent;
 }
-
-.connection-form {
-  //position: relative;
-  display: flex;
-  //display: none;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+.modal {
   position: fixed;
-  top: 120px;
+  top: 50%;
   left: 50%;
-  margin-left: -310px;
   width: 620px;
-  height: 430px;
-  //padding: 20px;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
-  box-shadow: 0 0 20px 5px; 
+  box-shadow: 0 20px 24px 10px #898989;  
+  z-index: 15;
+}
+.container-modal {
+  width: 460px;
+  margin: 0 auto;
+  padding: 0;
+}
+/* Описание модал отправить письмо */
+.connection  {
+  display: none;
+  min-height: 430px;
 }
 .btn-close {
   position: absolute;
-  top: -9px;
-  right: -37px;
+  top: 9px;
+  right: 10px;
   width: 22px;
   height: 22px;
   cursor: pointer;
+  border: 0;
+  background-color: transparent;
 }
 .btn-close::before {
   position: absolute;
   content: "";
-  top: 7px;
-  right: -2px;
+  top: 9px;
+  right: 1px;
   width: 20px;
   height: 3px;
   background-color: #ee3643;
@@ -1123,65 +1146,168 @@ a {
 .btn-close::after {
   position: absolute;
   content: "";
-  top: 7px;
-  right: -2px;
+  top: 9px;
+  right: 1px;
   width: 20px;
   height: 3px;
   background-color: #ee3643;
   transform: rotate(-45deg);
-
-}
-.send {
-  //display: inline-block;
-  width: 460px;
-  min-height: 28px;
-  //margin-left: 80px;
-  //vertical-align: middle;
-  //text-align: center;
-  margin: 40px 80px;
-  background-color: #ee3643;
-  border-radius: 3px;
-  font-size: 18px;
-  line-height: 18px;
-  color: #ffffff;
 }
 .connection-bottom {
   width: 100%;
   min-height: 112px;
   background-color: #f1f1f1;
 }
-.large-map {
-  display: none;
-  position: fixed;
-  top: 120px;
-  left: 50%;
-  margin-left: -470px;
-  //width: 500px;
-  //height: 300px;
+.connection-form label{
+  font-size: 20px;
+}
+.personal-modal {
+  display: flex;
+  justify-content: space-between;
   padding: 0;
-  background-color: grey;
-  border: 5px solid #000000;
-  box-shadow: 0 0 20px 5px; 
+  padding-top: 50px;
 }
-.map-container {
-  display: block;
-  width: 940px;
-  height: 446px;
+.inline-edit {
+  display: flex;
+  flex-direction: column;
 }
-.map-conteiner img {
+.inline-edit input {
+  padding-left: 14px;
+  min-width: 220px;
+  height: 38px;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  outline: none;
+}
+.inline-edit input:hover {
+  border: 2px solid #b5b5b5;
+}
+.inline-edit input:focus {
+  border: 2px solid #ee3643;
+}
+.inline-edit input::placeholder {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+  padding-left: 14px;
+  color: #a9a9a9;
+}
+.latter {
+  padding-top: 19px;
+}
+.latter-text {
+  width: 460px;
+  min-height: 114px;
+  resize: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+  padding-left: 14px;
+  margin-bottom: 29px;
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+  outline: none;
+}
+.latter-text:hover {
+  border: 2px solid #b5b5b5;
+}
+.latter-text:focus {
+  border: 2px solid #ee3643;
+}
+.send {
+  width: 460px;
+  min-height: 38px;
+  margin-top: 37px;
+  border: none;
+  border-radius: 6px/2px;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: #ee3643;
+  color: #ffffff;
+}
+.send:hover {
+  background-color: #ca2c37;
+  color: #ffffff;
+}
+/* Описание модал добавлено в корзину */
+.append-cart {
+  display: none;
+  min-height: 282px;
+}
+.ready {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 48px 0;
+}
+.ok {
+  width: 66px;
+  height: 66px;
+}
+.ok img {
   width: 100%;
   height: auto;
 }
-.append-cart {
- display: none;
+.ok + div {
+  padding-right: 46px;
+}
+.send-columns {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.send-order {
+  display: block;
+  width: 220px;
+  height: 38px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+  color: #000000;
+}
+.send-order:hover {
+  background-color: #ee3643;
+  color: #ffffff;
+}
+.send-buy {
+  display: block;
+  width: 220px;
+  height: 38px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+  color: #000000;
+}
+.send-buy:hover {
+  background-color: #ee3643;
+  color: #ffffff;
+}
+/* Описание модал большая карта */
+.large-map {
+  display: none;
   position: fixed;
-  top: 120px;
+  top: 50%;
   left: 50%;
-  margin-left: -250px;
-  width: 500px;
-  height: 300px;
-  padding: 20px;
-  background-color: grey;
-  border: 5px solid #000000;
-  box-shadow: 0 0 20px 5px;  
+  width: 940px;
+  background-color: #c2c2c2;
+  transform: translate(-50%, -50%); 
+  box-shadow: 0 0 15px 4px #c9c9c9;  
+}
+.map-container {
+  width: 940px;
+  height: 446px;
+}
+.map-container img {
+  width: 100%;
+  height: auto;
 }

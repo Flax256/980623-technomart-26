@@ -12,8 +12,8 @@
         <div class="container">
           <a class="logo"><img class="logo-top" src="img/logo-technomart.svg" alt="Логотип «Техномарт»"></a>
           <form class="finder" action="https://echo.htmlacademy.ru" method="post">
-            <label>
-              <input type="text" id="finder-field" placeholder="Поиск:" aria-label="Строка для поиска">
+            <label aria-label="Строка для поиска">
+              <input type="text" id="finder-field" placeholder="Поиск:">
             </label>  
           </form>      
           <a class="bookmarks-link" href="">Закладки: 0</a>  
@@ -81,7 +81,7 @@
         <div class="map-container">
           <img src="img/big-map.png"  width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"> 
         </div>
-        <button class="btn-close" type="button" aria-label="Закрыть">x</button>
+        <button class="btn-close" type="button" aria-label="Закрыть карту"></button>
       </section>         
     </main>
     <footer class="main-footer">
@@ -138,28 +138,32 @@
         </div>
       </div>      
     </footer>
-    <section class="connection"> 
+    <section class="modal connection"> 
       <h2 class="visually-hidden">Заблудились? Напишите нам</h2>
       <form class="connection-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="connection-name">Ваше имя:</label>     
-          <input id="connection-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="connection-email">Ваш e-mail:</label>
-          <input id="connection-email" type="text" name="email" value="" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="connection-text">Текст письма:</label> 
-          <textarea id="connection-text" rows="10" cols="45" name="text" placeholder="В свободной форме"></textarea>
-        </p>
-        <div class="connection-bottom">
-          <button class="send" type="submit" aria-label="Отправить письмо">Отправить</button>
+        <div class="container-modal">
+          <div class="personal-modal">
+            <div class="inline-edit">
+              <label for="connection-name">Ваше имя:</label>     
+              <input id="connection-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+            </div>
+            <div class="inline-edit">
+              <label for="connection-email">Ваш e-mail:</label>
+              <input id="connection-email" type="text" name="email" value="" placeholder="email@example.com">
+            </div>
+          </div>  
         </div>  
-        <button class="btn-close" type="button">
-          <span class="visually-hidden">Закрыть</span>
-        </button> 
-      </form>
+        <div class="latter container-modal">
+          <label for="connection-text">Текст письма:</label> 
+          <textarea class="latter-text" id="connection-text" rows="6" cols="60" name="text" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="connection-bottom">
+          <div class="container-modal">
+            <button class="send container-modal" type="submit" aria-label="Отправить письмо">Отправить</button>
+          </div>  
+        </div>
+        <button class="btn-close" type="button" aria-label="Закрыть форму отправки письма"></button>
+      </form>  
     </section>   
   </body>
 </html>
