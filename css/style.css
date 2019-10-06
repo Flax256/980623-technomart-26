@@ -1114,7 +1114,8 @@ a {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
-  box-shadow: 0 20px 24px 10px #898989;  
+  //box-shadow: 0 20px 24px 10px #898989;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   z-index: 15;
 }
 .container-modal {
@@ -1212,6 +1213,12 @@ a {
   border-radius: 3px;
   outline: none;
 }
+.latter-text::placeholder {
+  color: #a9a9a9;
+  padding-left: 14px;
+  padding-top: 7px;
+  //opacity: 1;
+}
 .latter-text:hover {
   border: 2px solid #b5b5b5;
 }
@@ -1233,10 +1240,15 @@ a {
   background-color: #ca2c37;
   color: #ffffff;
 }
+.send:active {
+  background-color: #ba2732;
+  color: #ffffff;
+}
 /* Описание модал добавлено в корзину */
 .append-cart {
   display: none;
   min-height: 282px;
+  box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75); 
 }
 .ready {
   display: flex;
@@ -1266,17 +1278,21 @@ a {
   display: block;
   width: 220px;
   height: 38px;
-  background-color: #ffffff;
+  background-color: #ee3643;
   border-radius: 3px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
   padding: 10px 0;
-  color: #000000;
+  color: #ffffff;
 }
 .send-order:hover {
-  background-color: #ee3643;
+  background-color: #ca2c37;
+  color: #ffffff;
+}
+.send-order:active {
+  background-color: #ba2732;
   color: #ffffff;
 }
 .send-buy {
@@ -1293,8 +1309,12 @@ a {
   color: #000000;
 }
 .send-buy:hover {
-  background-color: #ee3643;
-  color: #ffffff;
+  color: #ee3643;
+  //color: #ffffff;
+}
+.send-buy:active {
+  color: rgba(0, 0, 0, 0.3);
+  //color: #ffffff;
 }
 /* Описание модал большая карта */
 .large-map {
@@ -1303,15 +1323,23 @@ a {
   top: 50%;
   left: 50%;
   width: 940px;
-  background-color: #c2c2c2;
+  background-color: #565656;
   transform: translate(-50%, -50%); 
-  box-shadow: 0 0 15px 4px #c9c9c9;  
+  box-shadow: 0 0 16px 8px rgba(47, 42, 43, 0.5);
 }
 .map-container {
   width: 940px;
-  height: 446px;
+  height: 446px;  
+}
+.map-container iframe {
+  position: relative;
+  z-index: 2;
 }
 .map-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
   height: auto;
 }
