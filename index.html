@@ -72,7 +72,7 @@
             Вы можете забрать товар сами,<br> заехав в наш офис:
           </p>
           <div class="contacts-img">
-           <img src="img/small-map.png" width="300" height="158" alt="Карта месторасположения">
+           <img class="img-map" src="img/small-map.png" width="300" height="158" alt="Карта месторасположения">
           </div>  
           <button class="button-red" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button> 
         </div>
@@ -84,7 +84,7 @@
           <img src="img/big-map.png"  width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           
         </div>
-        <button class="btn-close" type="button" aria-label="Закрыть карту"></button>   
+        <button class="btn-close close-map" type="button" aria-label="Закрыть карту"></button>   
       </section>         
     </main>
     <footer class="main-footer">
@@ -167,6 +167,23 @@
         </div>
         <button class="btn-close" type="button" aria-label="Закрыть форму отправки письма"></button>
       </form>  
-    </section>   
+    </section> 
+    <script>
+      var img = document.querySelector(".img-map");
+      var large = document.querySelector(".large-map");
+      var close = document.querySelector(".close-map");
+      img.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        large.classList.add("modal-show");
+      });
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        large.classList.remove("modal-show");
+      });      
+ 
+    
+      
+      
+    </script>
   </body>
 </html>
