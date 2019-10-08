@@ -49,7 +49,7 @@
       </nav>      
     </header>
     <main class="container">
-      <h1 class="visually-hidden">Главная страница</h1>
+      <h1 class="visually-hidden">Главная страница компании «Техномарт»</h1>
       <h2 class="visually-hidden">Приемущества</h2>
       <div class="main-columns">
         <div class="slider-column">
@@ -70,9 +70,24 @@
               <img  class="img-perfect" src="img/icon-2.svg" width="75" height="61" alt="Пиктограмма шуруповерт">
             </div>
           </div>
-          <div class="slider">
-            <img class="slider-1" src="img/slider-1.jpg" width="620" height="266" alt="Слайдер рабочий 1">
-          </div>
+          <section class="slider">
+            <h2 class="visually-hidden">Слайдер</h2>
+            
+            <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
+            <div class="slider-controls">
+              <label class="check-slider check-label1" for="slide-1"></label>
+              <label class="check-slider check-label2" for="slide-2"></label>
+            </div>
+            <ul class="slider-list">
+              <li class="slider-item">
+                <img class="slider-1" src="img/slider-1.jpg" width="620" height="266" alt="Слайдер рабочий 1">
+              </li>
+              <li class="slider-item">
+                <img class="slider-1" src="img/slider-2.jpg" width="620" height="266" alt="Слайдер рабочий 1">
+              </li>
+            </ul>
+          </section>
         </div>
         <div class="list-column">
           <div class="item item-3">
@@ -96,10 +111,9 @@
             </div>
             <img  class="img-perfect" src="img/icon-5.svg" width="78" height="63" alt="Пиктограмма грузовик">
           </div>
-        </div>
-             
+        </div>       
       </div>
-      <h1 class="visually-hidden">Главная страница компании «Техномарт»</h1>
+      
       <div class="group-company">    
         <div class="main-about">
           <h2>Компания «Техномарт»</h2>    
@@ -224,11 +238,11 @@
       var close = document.querySelector(".close-map");
       img.addEventListener("click", function (evt) {
         evt.preventDefault();
-        large.classList.add("modal-show");
+        large.classList.add("show");
       });
       close.addEventListener("click", function (evt) {
         evt.preventDefault();
-        large.classList.remove("modal-show");
+        large.classList.remove("show");
       });      
  
     

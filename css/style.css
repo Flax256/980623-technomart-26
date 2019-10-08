@@ -539,6 +539,63 @@ a {
   min-height: 410px;
   //background-color: green;
 }
+.slider {
+  position: relative;
+}
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.check-slider {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 3px;
+  
+  /* Временно для демонстрации */
+  background-color: #ffffff;
+}
+.check-slider::after {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 2px;
+  left: 2px;
+  background-color: #ee3643;
+  border-radius: 50%;   
+}
+#slide-1:checked ~ .slider-controls .check-label1::after,
+#slide-2:checked ~ .slider-controls .check-label2::after {
+  display: block;
+}
+.slider-list {
+  width: 620px;
+  height: 266px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider-item {
+  display: none;
+  width: 620;
+  height: 100%;
+  margin-bottom: auto;
+}
+#slide-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+#slide-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
 .row-item {
   display: flex;
   justify-content: space-between;
@@ -1439,6 +1496,9 @@ a {
   width: 100%;
   height: auto;
 }
-.modal-show {
+.show {
   display: block;
+}
+.non-show {
+  display: none;
 }
