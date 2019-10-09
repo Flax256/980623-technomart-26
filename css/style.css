@@ -522,13 +522,12 @@ a {
   background-color: #293449;
   color: #a1a4a8;
 }
-/* Блок main для index */
+/* Блок main */
 .advantage {
   display: flex;
   justify-content: space-between;
   width: 100%;
   min-height: 410px;
-  //background-color: blue;  
 }
 .advantage-slider {
   display: flex;
@@ -536,13 +535,62 @@ a {
   justify-content: space-between;
   width: 620px;
   min-height: 410px;
-  //background-color: green;
+}
+.advantage-row {
+  display: flex;
+  justify-content: space-between;
+  width: 620px;
+  min-height: 123px;
+}
+.item-advantage {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 300px;
+  min-height: 123px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.advantage-about {
+  padding-left: 23px;
+}
+.perfect {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 20px;
+}
+.btn-advantage {
+  width: 135px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  margin-top: 12px;
+  padding: :0;
+  color: inherit;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 3px;  
+}
+.img-perfect {
+  margin-right: 43px;
+  margin-top: 31px;
+}
+.item-1 {
+  background-color: #ffb647;
+}
+.item-2 {
+  background-color: #3bbce3;
 }
 .slider {
   position: relative;
   width: 620px;
   min-height: 266px;
-  //background-color: grey; 
 }
 .slider-controls {
   position: absolute;
@@ -551,7 +599,7 @@ a {
   transform: translateX(-50%);
   z-index: 1;
 }
-.check-slider {
+.radio-slider {
   display: inline-block;
   position: relative;
   width: 10px;
@@ -560,9 +608,8 @@ a {
   cursor: pointer;
   margin: 3px;
   background-color: #ffffff;
-  //z-index: 50;
 }
-.check-slider::after {
+.radio-slider::after {
   display: none;
   position: absolute;
   content: "";
@@ -572,10 +619,9 @@ a {
   left: 2px;
   background-color: #ee3643;
   border-radius: 50%; 
-  //z-index: 50;
 }
-#slide-1:checked ~ .slider-controls .check-label1::after,
-#slide-2:checked ~ .slider-controls .check-label2::after {
+#slide-1:checked ~ .slider-controls .radio-label1::after,
+#slide-2:checked ~ .slider-controls .radio-label2::after {
   display: block;
 }
 .slider-list {
@@ -597,6 +643,7 @@ a {
   background-image: url("../img/icon-left.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  z-index: 1;
 }
 .slider-list::after {
   position: absolute;
@@ -609,6 +656,7 @@ a {
   background-image: url("../img/icon-right.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  z-index: 1;
 }
 .slider-item {
   display: none;
@@ -622,71 +670,37 @@ a {
 #slide-2:checked ~ .slider-list .slider-item:nth-child(2) {
   display: block;
 }
-
-.advantage-row {
-  display: flex;
-  justify-content: space-between;
-  width: 620px;
-  min-height: 123px;
-  //background-color: grey; 
-}
-.item {
-  display: flex;
-  justify-content: space-between;
+.slider-img {
   position: relative;
-  width: 300px;
-  min-height: 123px;
+}
+.slider-about {
+  position: absolute;
+  top: 0;
+  left: 0;
   color: #ffffff;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  //padding-bottom: 
-  //background-color: orange;
 }
-.item-about {
-  padding-left: 23px;
-}
-.perfect {
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: inherit;
-  margin: 0;
-  margin-top: 20px;
-}
-.btn-advantage {
-  //display: block;
-  width: 135px;
-  height: 38px;
-  font-size: 14px;
-  line-height: 18px;
-  //margin: 0;
-  margin: 12px 0 0 0;
-  //margin-bottom: 22px;
-  padding: :0;
-  color: inherit;
+.slider-about h3 {
+  font-size: 36px;
+  line-height: 36px;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 3px;  
+  margin: 0;
 }
-.img-perfect {
-  margin-right: 43px;
-  margin-top: 31px;
-}
-.item-1 {
-  background-color: #ffb647;
-}
-.item-2 {
-  background-color: #3bbce3;
-}
+.slider-about p {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
 
+}
+.slider-about .button-red {
+  font-size: 18px;
+  line-height: 24px;
+}
 .advantage-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
   min-height: 410px;
-  //background-color: red;
 }
 .item-3 {
   background-color: #dc91d8;
@@ -1289,7 +1303,6 @@ a {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
-  //box-shadow: 0 20px 24px 10px #898989;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   z-index: 15;
 }
@@ -1393,7 +1406,6 @@ a {
   color: #a9a9a9;
   padding-left: 14px;
   padding-top: 7px;
-  //opacity: 1;
 }
 .latter-text:hover {
   border: 2px solid #b5b5b5;
@@ -1486,11 +1498,9 @@ a {
 }
 .send-buy:hover {
   color: #ee3643;
-  //color: #ffffff;
 }
 .send-buy:active {
   color: rgba(0, 0, 0, 0.3);
-  //color: #ffffff;
 }
 /* Описание модал большая карта */
 .large-map {
@@ -1502,6 +1512,7 @@ a {
   background-color: #565656;
   transform: translate(-50%, -50%); 
   box-shadow: 0 0 16px 8px rgba(47, 42, 43, 0.5);
+  z-index: 100;
 }
 .map-container {
   width: 940px;
@@ -1509,7 +1520,7 @@ a {
 }
 .map-container iframe {
   position: relative;
-  z-index: 200;
+  z-index: 2;
 }
 .map-container img {
   position: absolute;
@@ -1517,7 +1528,7 @@ a {
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 100;
+  z-index: 1;
 }
 .show {
   display: block;
