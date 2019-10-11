@@ -71,7 +71,7 @@
             </div>
           </div>
           <section class="slider">
-            <h2 class="visually-hidden">Слайдер</h2>
+            <h3 class="visually-hidden">Слайдер</h3>
             <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
             <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
             <div class="slider-controls">
@@ -121,7 +121,85 @@
             <img  class="img-perfect" src="img/icon-5.svg" width="78" height="63" alt="Пиктограмма грузовик">
           </div>
         </div>       
-      </section> 
+      </section>
+      <div class="popular container">
+        <div class="popular-head">
+          <h2>Популярные товары:</h2>
+          <button class="button-red" type="button">Все популярные товары</button>
+        </div>
+        <div class="catalog-popular">
+          
+          
+          
+          <ul class="catalog-list no-point">
+            <li class="catalog-item"> 
+              <h3 class="name-item">
+               <span class="brend">Перфоратор BOSH</span>
+               <span class="product">«BFG 9000»</span> 
+              </h3>
+              <p class="catalog-item-buy">
+                <a class="button-buy" href="">Купить</a>
+                <a class="button-bookmarks" href="">В закладки</a>        
+              </p>
+              <div class="product-image">
+                <img src="img/perforator_1_1.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 3000»">
+              </div>
+              <s class="price-old"> 32500 Р.</s>
+              <span class="price">25500 Р.</span>  
+            </li>
+            <li class="catalog-item">
+              <h3 class="name-item">
+                <span class="brend">Перфоратор BOSH</span>
+                <span class="product">«BFG 3000»</span>     
+              </h3>
+              <p class="catalog-item-buy">
+                <a class="button-buy" href="">Купить</a>
+                <a class="button-bookmarks" href="">В закладки</a>        
+              </p>
+              <div class="product-image">
+                <img src="img/perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 3000»">
+              </div>
+              <s class="price-old"> 22500 Р.</s>
+              <span class="price">15500 Р.</span>
+            </li>
+            <li class="catalog-item">
+              <h3 class="name-item">
+                <span class="brend">Перфоратор BOSH</span>
+                <span class="product">«BFG 6000»</span> 
+              </h3> 
+              <p class="catalog-item-buy">
+                <a class="button-buy" href="">Купить</a>
+                <a class="button-bookmarks" href="">В закладки</a>        
+              </p>
+              <div class="product-image">
+                <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 6000»">
+              </div> 
+              <s class="price-old"> 30500 Р.</s>
+              <span class="price">25500 Р.</span> 
+            </li>
+            <li class="catalog-item">
+              <h3 class="name-item">
+                <span class="brend">Перфоратор BOSH</span>
+                <span class="product">«BFG 2000»</span>  
+              </h3>
+              <p class="catalog-item-buy">
+                <a class="button-buy" href="">Купить</a>
+                <a class="button-bookmarks" href="">В закладки</a>        
+              </p>
+              <div class="new"></div>
+              <div class="product-image">
+                <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 6000»">
+              </div> 
+              <span class="price">12500 Р.</span> 
+            </li>
+            
+          </ul>
+          
+          
+          
+          
+        </div>
+      </div>
       <div class="group-company">    
         <div class="main-about">
           <h2>Компания «Техномарт»</h2>    
@@ -234,28 +312,30 @@
         </div>
         <div class="connection-bottom">
           <div class="container-modal">
-            <button class="send container-modal" type="submit" aria-label="Отправить письмо">Отправить</button>
+            <button class="container-modal button-red" type="submit" aria-label="Отправить письмо">Отправить</button>
           </div>  
         </div>
         <button class="btn-close" type="button" aria-label="Закрыть форму отправки письма"></button>
       </form>  
-    </section> 
-    <script>
-      var img = document.querySelector(".img-map");
-      var large = document.querySelector(".large-map");
-      var close = document.querySelector(".close-map");
-      img.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        large.classList.add("show");
-      });
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        large.classList.remove("show");
-      });      
- 
-    
-      
-      
-    </script>
+    </section>
+    <section class="modal append-cart">
+      <div class="ready container-modal">
+        <div class="ok">
+          <img src="img/icon-mark.svg" alt="Добавлено!">
+        </div>  
+        <div> Товар добавлен в корзину!</div> 
+      </div>  
+      <div class="connection-bottom">
+        <div class="container-modal">
+          <div class="send-columns">
+            <a class="send-order button-red" href="">Оформить заказ</a>
+            <a class="send-buy" href="catalog.html">Продолжить покупки</a>
+          </div>
+        </div>  
+      </div>
+      <button class="btn-close close-cart" type="button" aria-label="Закрыть сообщение о корзине"></button>
+    </section>
+    <script src="js/popup-map.js"></script>
+    <script src="js/append-cart.js"></script>
   </body>
 </html>

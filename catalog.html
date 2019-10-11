@@ -312,29 +312,13 @@
       <div class="connection-bottom">
         <div class="container-modal">
           <div class="send-columns">
-            <a class="send-order" href="">Оформить заказ</a>
+            <a class="send-order button-red" href="">Оформить заказ</a>
             <a class="send-buy" href="catalog.html">Продолжить покупки</a>
           </div>
         </div>  
       </div>
       <button class="btn-close close-cart" type="button" aria-label="Закрыть сообщение о корзине"></button>
     </section> 
-    <script>
-      var btnbuy = document.querySelectorAll(".button-buy");
-      var modalcart = document.querySelector(".append-cart");
-      var closecart = document.querySelector(".close-cart");
-      btnbuy.forEach(function(item) {
-        item.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        modalcart.classList.add("show");
-        });
-      });
-  
-      closecart.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        modalcart.classList.remove("show");
-      });      
-
-    </script>
+    <script src="js/append-cart.js"></script>
   </body>
 </html>

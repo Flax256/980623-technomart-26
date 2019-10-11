@@ -106,13 +106,18 @@ a {
   color: #cacaca;
 }
 .button-red {
+  min-height: 38px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   color: #ffffff;  
   text-transform: uppercase;
   background-color: #ee3643;
-  border: none;    
+  border-radius: 2px;
+  border: none; 
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 .button-red:hover {
   background-color: #ca2c37;
@@ -575,7 +580,7 @@ a {
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 3px;  
+  border-radius: 2px;  
 }
 .img-perfect {
   margin-right: 43px;
@@ -675,8 +680,8 @@ a {
 }
 .slider-about {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 27px;
+  left: 24px;
   color: #ffffff;
 }
 .slider-about h3 {
@@ -684,16 +689,20 @@ a {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
+  margin-left: -2px;
 }
 .slider-about p {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
+  padding: 0;
+  margin-top: -4px;
+  margin-bottom: 121px;
 
 }
 .slider-about .button-red {
-  font-size: 18px;
-  line-height: 24px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 .advantage-column {
   display: flex;
@@ -710,6 +719,27 @@ a {
 }
 .item-5 {
   background-color: #ffc047;
+}
+.popular-head {
+  display: flex;
+  justify-content: space-between;
+  min-height: 89px;
+  align-items: center;
+  margin-top: 53px;
+  margin-bottom: 20px;
+  background-color: #f9f5f0;
+  
+}
+.popular h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-left: 30px;
+}
+.popular .button-red {
+  margin-right: 24px;
+  padding-left: 55px;
+  padding-right: 54px;
 }
 /* Начало блока main */
 .catalog-main {
@@ -897,6 +927,10 @@ a {
   width: 700px;
   min-height: 1085;
 }
+.catalog-popular {
+  width: 940px;
+  min-height: 1085;
+}
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -917,8 +951,12 @@ a {
   min-height: 317px;
   border: 1px solid #cacaca;
 }
-.catalog-item:nth-child(3n) {
+.catalog .catalog-item:nth-child(3n) {
   margin-right: 0;
+}
+.popular .catalog-item:nth-child(4n) {
+  margin-right: 0;
+  
 }
 .catalog-item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -1020,7 +1058,7 @@ a {
   background-color: #63a63e;
   border: 3px solid #63a63e;
   border-bottom-color: #367315;
-  border-radius:3px;
+  border-radius: 2px;
   text-align: center;
   color: white;
   font-size: 14px;
@@ -1106,7 +1144,8 @@ a {
 }
 .main-about .button-red {
   align-self: flex-start;
-  padding: 10px 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-top: auto;
 }
 .contacts-main {
@@ -1143,7 +1182,8 @@ a {
   height: auto;
 }
 .contacts-main .button-red {
-  padding: 10px 0px;
+  padding-left: 0;
+  padding-right: 0;
   margin-top: auto;
 }
 /* Начало блока footer */
@@ -1370,7 +1410,7 @@ a {
   min-width: 220px;
   height: 38px;
   border: 2px solid #d7dcde;
-  border-radius: 3px;
+  border-radius: 2px;
   outline: none;
 }
 .inline-edit input:hover {
@@ -1399,7 +1439,7 @@ a {
   padding-left: 14px;
   margin-bottom: 29px;
   border: 2px solid #dee3e4;
-  border-radius: 3px;
+  border-radius: 2px;
   outline: none;
 }
 .latter-text::placeholder {
@@ -1413,24 +1453,8 @@ a {
 .latter-text:focus {
   border: 2px solid #ee3643;
 }
-.send {
-  width: 460px;
-  min-height: 38px;
-  margin-top: 37px;
-  border: none;
-  border-radius: 6px/2px;
-  font-size: 18px;
-  line-height: 18px;
-  background-color: #ee3643;
-  color: #ffffff;
-}
-.send:hover {
-  background-color: #ca2c37;
-  color: #ffffff;
-}
-.send:active {
-  background-color: #ba2732;
-  color: #ffffff;
+.connection-bottom .button-red {
+  border-radius: 5px/2px;
 }
 /* Описание модал добавлено в корзину */
 .append-cart {
@@ -1458,37 +1482,20 @@ a {
   padding-right: 46px;
 }
 .send-columns {
+  min-height: 112px;
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  align-items: center;
 }
-.send-order {
-  display: block;
+.send-order.button-red {
   width: 220px;
-  height: 38px;
-  background-color: #ee3643;
-  border-radius: 3px;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 10px 0;
-  color: #ffffff;
-}
-.send-order:hover {
-  background-color: #ca2c37;
-  color: #ffffff;
-}
-.send-order:active {
-  background-color: #ba2732;
-  color: #ffffff;
+  padding: 10px 0;  
 }
 .send-buy {
-  display: block;
   width: 220px;
   height: 38px;
   background-color: #ffffff;
-  border-radius: 3px;
+  border-radius: 2px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
