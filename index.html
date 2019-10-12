@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">        
   </head>
   <body>
-    <header class="main-header">
+    <header class="grey-ground">
       <div class="header-top">
         <div class="container">
           <a class="logo"><img class="logo-top" src="img/logo-technomart.svg" alt="Логотип «Техномарт»"></a>
@@ -48,195 +48,283 @@
         </div>      
       </nav>      
     </header>
-    <main class="container">
-      <h1 class="visually-hidden">Главная страница компании «Техномарт»</h1>
-      <section class="advantage">
-        <h2 class="visually-hidden">Приемущества</h2>
-        <div class="advantage-slider">
-          <div class="advantage-row">
-            <div class="item-advantage item-1">
-              <div class="new"></div>
-              <div class="advantage-about">
-                <h3 class="perfect">Материалы</h3>
-                <button class="btn-advantage" type="button">На любой вкус</button>  
+    <main>
+      <div class="container">
+        <h1 class="visually-hidden">Главная страница компании «Техномарт»</h1>
+        <section class="advantage">
+          <h2 class="visually-hidden">Приемущества</h2>
+          <div class="advantage-slider">
+            <div class="advantage-row">
+              <div class="item-advantage item-1">
+                <div class="new"></div>
+                <div class="advantage-about">
+                  <h3 class="perfect">Материалы</h3>
+                  <button class="btn-advantage" type="button">На любой вкус</button>  
+                </div>
+                <img  class="img-perfect" src="img/icon-1.svg" width="44" height="65" alt="Пиктограмма ведерко">
               </div>
-              <img  class="img-perfect" src="img/icon-1.svg" width="44" height="65" alt="Пиктограмма ведерко">
-            </div>
-            <div class="item-advantage item-2">
-              <div class="advantage-about">
-                <h3 class="perfect">Инструмент</h3>
-                <button class="btn-advantage" type="button">На все случаи</button>  
+              <div class="item-advantage item-2">
+                <div class="advantage-about">
+                  <h3 class="perfect">Инструмент</h3>
+                  <button class="btn-advantage" type="button">На все случаи</button>  
+                </div>
+                <img  class="img-perfect" src="img/icon-2.svg" width="75" height="61" alt="Пиктограмма шуруповерт">
               </div>
-              <img  class="img-perfect" src="img/icon-2.svg" width="75" height="61" alt="Пиктограмма шуруповерт">
             </div>
+            <section class="slider">
+              <h3 class="visually-hidden">Слайдер</h3>
+              <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
+              <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
+              <div class="slider-controls">
+                <label class="radio-slider radio-label1" for="slide-1"></label>
+                <label class="radio-slider radio-label2" for="slide-2"></label>
+              </div>
+              <ul class="slider-list">
+                <li class="slider-item">
+                  <img class="slider-img" src="img/slider-1.jpg" width="620" height="266" alt="Дрели из слайдера">
+                  <div class="slider-about">
+                    <h3>Перфораторы</h3>
+                    <p>Настоящие мужские игрушки</p>
+                    <button class="button-red" type="button">Открыть каталог</button>
+                  </div>
+                </li>
+                <li class="slider-item">
+                  <img class="slider-img" src="img/slider-2.jpg" width="620" height="266" alt="Перфораторы из слайдера">
+                  <div class="slider-about">
+                    <h3>Дрели</h3>
+                    <p>Соседям на радость!</p>
+                    <button class="button-red" type="button">Открыть каталог</button>
+                  </div>
+                </li>
+              </ul>
+            </section>
           </div>
-          <section class="slider">
-            <h3 class="visually-hidden">Слайдер</h3>
-            <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
-            <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
-            <div class="slider-controls">
-              <label class="radio-slider radio-label1" for="slide-1"></label>
-              <label class="radio-slider radio-label2" for="slide-2"></label>
+          <div class="advantage-column">
+            <div class="item-advantage item-3">
+              <div class="advantage-about">
+                <h3 class="perfect">Техника</h3>
+                  <button class="btn-advantage" type="button">Для стройки</button>  
+              </div>
+              <img  class="img-perfect" src="img/icon-3.svg" width="78" height="62" alt="Пиктограмма трактор">
             </div>
-            <ul class="slider-list">
-              <li class="slider-item">
-                <img class="slider-img" src="img/slider-1.jpg" width="620" height="266" alt="Дрели">
-                <div class="slider-about">
-                  <h3>Перфораторы</h3>
-                  <p>Настоящие мужские игрушки</p>
-                  <button class="button-red" type="button">Открыть каталог</button>
+            <div class="item-advantage item-4">
+              <div class="advantage-about">
+                <h3 class="perfect">Скидки 50%</h3>
+                  <button class="btn-advantage" type="button">На 350 товаров</button>  
+              </div>
+              <img  class="img-perfect" src="img/icon-4.svg" width="59" height="72" alt="Пиктограмма корзина">
+            </div>
+            <div class="item-advantage item-5">
+              <div class="advantage-about">
+                <h3 class="perfect">Доставка</h3>
+                  <button class="btn-advantage" type="button">Бесплатно</button>  
+              </div>
+              <img  class="img-perfect" src="img/icon-5.svg" width="78" height="63" alt="Пиктограмма грузовик">
+            </div>
+          </div>       
+        </section>
+        <div class="popular container">
+          <div class="popular-head">
+            <h2>Популярные товары:</h2>
+            <button class="button-red" type="button">Все популярные товары</button>
+          </div>
+          <div class="catalog-popular">  
+            <ul class="catalog-list no-point">
+              <li class="catalog-item"> 
+                <h3 class="name-item">
+                 <span class="brend">Перфоратор BOSH</span>
+                 <span class="product">«BFG 9000»</span> 
+                </h3>
+                <p class="catalog-item-buy">
+                  <a class="button-buy" href="">Купить</a>
+                  <a class="button-bookmarks" href="">В закладки</a>        
+                </p>
+                <div class="product-image">
+                  <img src="img/perforator_1_1.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 3000»">
                 </div>
+                <s class="price-old"> 32500 Р.</s>
+                <span class="price">25500 Р.</span>  
               </li>
-              <li class="slider-item">
-                <img class="slider-img" src="img/slider-2.jpg" width="620" height="266" alt="Перфораторы">
-                <div class="slider-about">
-                  <h3>Дрели</h3>
-                  <p>Соседям на радость!</p>
-                  <button class="button-red" type="button">Открыть каталог</button>
+              <li class="catalog-item">
+                <h3 class="name-item">
+                  <span class="brend">Перфоратор BOSH</span>
+                  <span class="product">«BFG 3000»</span>     
+                </h3>
+                <p class="catalog-item-buy">
+                  <a class="button-buy" href="">Купить</a>
+                  <a class="button-bookmarks" href="">В закладки</a>        
+                </p>
+                <div class="product-image">
+                  <img src="img/perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 3000»">
                 </div>
+                <s class="price-old"> 22500 Р.</s>
+                <span class="price">15500 Р.</span>
+              </li>
+              <li class="catalog-item">
+                <h3 class="name-item">
+                  <span class="brend">Перфоратор BOSH</span>
+                  <span class="product">«BFG 6000»</span> 
+                </h3> 
+                <p class="catalog-item-buy">
+                  <a class="button-buy" href="">Купить</a>
+                  <a class="button-bookmarks" href="">В закладки</a>        
+                </p>
+                <div class="product-image">
+                  <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 6000»">
+                </div> 
+                <s class="price-old"> 30500 Р.</s>
+                <span class="price">25500 Р.</span> 
+              </li>
+              <li class="catalog-item">
+                <h3 class="name-item">
+                  <span class="brend">Перфоратор BOSH</span>
+                  <span class="product">«BFG 2000»</span>  
+                </h3>
+                <p class="catalog-item-buy">
+                  <a class="button-buy" href="">Купить</a>
+                  <a class="button-bookmarks" href="">В закладки</a>        
+                </p>
+                <div class="new"></div>
+                <div class="product-image">
+                  <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 6000»">
+                </div> 
+                <span class="price">12500 Р.</span> 
               </li>
             </ul>
-          </section>
+          </div>
         </div>
-        <div class="advantage-column">
-          <div class="item-advantage item-3">
-            <div class="advantage-about">
-              <h3 class="perfect">Техника</h3>
-                <button class="btn-advantage" type="button">Для стройки</button>  
-            </div>
-            <img  class="img-perfect" src="img/icon-3.svg" width="78" height="62" alt="Пиктограмма трактор">
+        <div class="popular-brend container">
+          <div class="popular-head">
+            <h2>Популярные производители:</h2>
+            <button class="button-red" type="button">Все производители</button>
           </div>
-          <div class="item-advantage item-4">
-            <div class="advantage-about">
-              <h3 class="perfect">Скидки 50%</h3>
-                <button class="btn-advantage" type="button">На 350 товаров</button>  
-            </div>
-            <img  class="img-perfect" src="img/icon-4.svg" width="59" height="72" alt="Пиктограмма корзина">
-          </div>
-          <div class="item-advantage item-5">
-            <div class="advantage-about">
-              <h3 class="perfect">Доставка</h3>
-                <button class="btn-advantage" type="button">Бесплатно</button>  
-            </div>
-            <img  class="img-perfect" src="img/icon-5.svg" width="78" height="63" alt="Пиктограмма грузовик">
-          </div>
-        </div>       
-      </section>
-      <div class="popular container">
-        <div class="popular-head">
-          <h2>Популярные товары:</h2>
-          <button class="button-red" type="button">Все популярные товары</button>
-        </div>
-        <div class="catalog-popular">
-          
-          
-          
-          <ul class="catalog-list no-point">
-            <li class="catalog-item"> 
-              <h3 class="name-item">
-               <span class="brend">Перфоратор BOSH</span>
-               <span class="product">«BFG 9000»</span> 
-              </h3>
-              <p class="catalog-item-buy">
-                <a class="button-buy" href="">Купить</a>
-                <a class="button-bookmarks" href="">В закладки</a>        
-              </p>
-              <div class="product-image">
-                <img src="img/perforator_1_1.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 3000»">
-              </div>
-              <s class="price-old"> 32500 Р.</s>
-              <span class="price">25500 Р.</span>  
+          <ul class="brend-catalog">
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/bosch.png" width="126" height="37" alt="Логотип bosch">
+              </a>  
             </li>
-            <li class="catalog-item">
-              <h3 class="name-item">
-                <span class="brend">Перфоратор BOSH</span>
-                <span class="product">«BFG 3000»</span>     
-              </h3>
-              <p class="catalog-item-buy">
-                <a class="button-buy" href="">Купить</a>
-                <a class="button-bookmarks" href="">В закладки</a>        
-              </p>
-              <div class="product-image">
-                <img src="img/perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 3000»">
-              </div>
-              <s class="price-old"> 22500 Р.</s>
-              <span class="price">15500 Р.</span>
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/Makita.png" width="123" height="40" alt="Логотип Makita">
+              </a>  
             </li>
-            <li class="catalog-item">
-              <h3 class="name-item">
-                <span class="brend">Перфоратор BOSH</span>
-                <span class="product">«BFG 6000»</span> 
-              </h3> 
-              <p class="catalog-item-buy">
-                <a class="button-buy" href="">Купить</a>
-                <a class="button-bookmarks" href="">В закладки</a>        
-              </p>
-              <div class="product-image">
-                <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 6000»">
-              </div> 
-              <s class="price-old"> 30500 Р.</s>
-              <span class="price">25500 Р.</span> 
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/DeWALT.png" width="146" height="44" alt="Логотип DeWALT">
+              </a>  
             </li>
-            <li class="catalog-item">
-              <h3 class="name-item">
-                <span class="brend">Перфоратор BOSH</span>
-                <span class="product">«BFG 2000»</span>  
-              </h3>
-              <p class="catalog-item-buy">
-                <a class="button-buy" href="">Купить</a>
-                <a class="button-bookmarks" href="">В закладки</a>        
-              </p>
-              <div class="new"></div>
-              <div class="product-image">
-                <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSH «BFG 6000»">
-              </div> 
-              <span class="price">12500 Р.</span> 
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/interscol.png" width="200" height="88" alt="Логотип interscol">
+              </a>  
             </li>
-            
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/Hitachi.png" width="169" height="31" alt="Логотип Hitachi">
+              </a>  
+            </li>
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/LG.png" width="121" height="73" alt="Логотип LG">
+              </a>  
+            </li>
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/AEG.png" width="151" height="96" alt="Логотип AEG">
+              </a>  
+            </li>
+            <li>
+              <a class="brend-item" href="">
+                <img src="img/Metabo.png" width="204" height="69" alt="Логотип Metabo">
+              </a>  
+            </li>
           </ul>
-          
-          
-          
-          
         </div>
       </div>
-      <div class="group-company">    
-        <div class="main-about">
-          <h2>Компания «Техномарт»</h2>    
+      <div class="service grey-ground">
+        <div class="container">
+          <h2 class="">Сервисы</h2>
           <p>
-            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+            Хороший интернет-магазин отличается от плохого не только ценами!<br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <p>
-            Мы можем доставить ваш товар в самые отдаленные точки России!<br>Техномарт работает со многими транспортными компаниями:
-          </p>
-          <ul class="transport-company no-point">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li> 
-            <li>ЖелДорЭкспедиция</li>      
-          </ul> 
-          <button class="button-red" type="button">Подробнее о компании</button>
-        </div>
-        <div class="contacts-main">
-          <h2>Контакты</h2>
-          <p>
-            Вы можете забрать товар сами,<br> заехав в наш офис:
-          </p>
-          <div class="contacts-img">
-           <img class="img-map" src="img/small-map.png" width="300" height="158" alt="Карта месторасположения">
+          <div class="service-columns">
+            <input class="visually-hidden" type="radio" id="service-1" name="service-radio" checked>
+            <input class="visually-hidden" type="radio" id="service-2" name="service-radio">
+            <input class="visually-hidden" type="radio" id="service-3" name="service-radio">
+            <ul class="service-list">
+              <li><label class="" for="service-1">Доставка</label></li>
+              <li><label class="" for="service-2">Гарантия</label></li>
+              <li><label class="" for="service-3">Кредит</label></li>
+            </ul>
+            <div class="service1-about">
+              <h3>Доставка</h3>
+              <p>
+              Мы с удавольствием доставим ваш товарпрямо<br>
+              к вашему подъезду совершенно бесплатно! <br>
+              Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!
+              </p>
+            </div>
+            <div class="service2-about">
+              <h3>Гарантия</h3>
+              <p>
+               Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием,<br>
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                сгоревший товар на новый.<br> 
+                Дом уж восстановите как-нибудь сами.
+              </p>
+            </div>
+            <div class="service3-about">
+              <h3>Кредит</h3>
+              <p>
+                Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.
+              </p>
+            </div>
           </div>  
-          <button class="button-red" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button> 
         </div>
       </div>
-      <section class="large-map">
-        <div class="map-container">
-          <iframe src="https://yandex.ru/map-widget/v1/-/CGsO6IK~" width="940" height="446" frameborder="0" allowfullscreen="true" allowtransparency="true"></iframe>
-          
-          <img src="img/big-map.png"  width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-          
+      <div class="container">
+        <div class="group-company">    
+          <div class="main-about">
+            <h2>Компания «Техномарт»</h2>    
+            <p>
+              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+            </p>
+            <p>
+              Мы можем доставить ваш товар в самые отдаленные точки России!<br>Техномарт работает со многими транспортными компаниями:
+            </p>
+            <ul class="transport-company no-point">
+              <li>Деловые линии</li>
+              <li>Автотрейдинг</li> 
+              <li>ЖелДорЭкспедиция</li>      
+            </ul> 
+            <button class="button-red" type="button">Подробнее о компании</button>
+          </div>
+          <div class="contacts-main">
+            <h2>Контакты</h2>
+            <p>
+              Вы можете забрать товар сами,<br> заехав в наш офис:
+            </p>
+            <div class="contacts-img">
+             <img class="img-map" src="img/small-map.png" width="300" height="158" alt="Карта месторасположения">
+            </div>  
+            <button class="button-red" type="button">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</button> 
+          </div>
         </div>
-        <button class="btn-close close-map" type="button" aria-label="Закрыть карту"></button>   
-      </section>         
-    </main>
+        <section class="large-map">
+          <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CGsO6IK~" width="940" height="446" frameborder="0" allowfullscreen="true" allowtransparency="true"></iframe>
+
+            <img src="img/big-map.png"  width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+
+          </div>
+          <button class="btn-close close-map" type="button" aria-label="Закрыть карту"></button>   
+        </section>         
+      </div>
+    </main>  
     <footer class="main-footer">
       <div class="container">
         <div class="contacts-footer">

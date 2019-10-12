@@ -126,7 +126,7 @@ a {
   background-color: #ba2732;
 }
 /* Начало описания заголовка */
-.main-header {
+.grey-ground {
   padding-bottom: 60px;
   background-color: #f3f7f9; 
 }
@@ -533,6 +533,7 @@ a {
   justify-content: space-between;
   width: 100%;
   min-height: 410px;
+  margin-bottom: 53px;
 }
 .advantage-slider {
   display: flex;
@@ -580,7 +581,15 @@ a {
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 2px;  
+  border-radius: 2px; 
+}
+.btn-advantage:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.btn-advantage:active {
+  background-color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 .img-perfect {
   margin-right: 43px;
@@ -725,7 +734,6 @@ a {
   justify-content: space-between;
   min-height: 89px;
   align-items: center;
-  margin-top: 53px;
   margin-bottom: 20px;
   background-color: #f9f5f0;
   
@@ -738,19 +746,173 @@ a {
 }
 .popular .button-red {
   margin-right: 24px;
-  padding-left: 55px;
-  padding-right: 54px;
+  min-width: 253px;
 }
-/* Начало блока main */
-.catalog-main {
-  min-height: 90px;
+.popular-brend h2 {
   font-size: 30px;
   line-height: 30px;
-  color: #32425c;
   text-transform: uppercase;
-  padding-top: 30px;
   padding-left: 30px;
-  background-color: #f3f7f9;
+}
+.popular-brend .button-red {
+  margin-right: 24px;
+  min-width: 253px;
+}
+.brend-catalog {
+  width: 940px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+.brend-catalog li {
+  width: 220px;
+  min-height: 145px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 1px solid #cacaca; 
+}
+.brend-catalog li:nth-child(4n) {
+  margin-right: 0;
+}
+.brend-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.brend-item:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+.brend-item:active {
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+/* Начало блока main */
+.service {
+  min-height: 522px;
+}
+.service h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;    
+  line-height: 30px;
+  padding-top: 66px;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+}
+.service p {
+  margin: 0;
+}
+.service-list {
+  display: block;
+  position: relative;
+  list-style: none;
+  width: 240px;
+  padding: 0px;
+  margin: 0px;
+}
+.service-list::after {
+  position: absolute;
+  content: "";
+  top: -43px;
+  right: 0;
+  width: 10px;
+  height: 272px;
+  background-image: url("../img/service-shadow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.service-columns {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 68px;
+}
+.service-list label {
+  display: block;
+  color: #ffffff;
+  background-color: #32425c;
+  height: 62px;
+  font-size: 21px;
+  line-height: 30px;
+  padding-top: 15px;
+  padding-left:22px;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  cursor: pointer;
+}
+.service-list label:hover {
+  background-color: #293449;
+}
+#service-1:checked ~ .service-list li:nth-child(1) label {
+  color: #000000;
+  background-color: #ffffff;
+  border: none; 
+}
+#service-2:checked ~ .service-list li:nth-child(2) label {
+  color: #000000;
+  background-color: #ffffff;
+  border: none; 
+}
+#service-3:checked ~ .service-list li:nth-child(3) label {
+  color: #000000;
+  background-color: #ffffff;
+  border: none; 
+}
+.service1-about,
+.service2-about,
+.service3-about {
+  display: none;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-left: 81px;
+}
+.service1-about::after {
+  position: absolute;
+  content: "";
+  width: 468px;
+  height: 261px;
+  top: 21px;
+  right: 0;
+  background-image: url("../img/Car.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.service2-about::after {
+  position: absolute;
+  content: "";
+  width: 389px;
+  height: 283px;
+  top: 0;
+  right: 0;
+  background-image: url("../img/medal.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.service3-about::after {
+  position: absolute;
+  content: "";
+  width: 465px;
+  height: 285px;
+  top: -4px;
+  right: 0;
+  background-image: url("../img/kredit.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+} 
+.service1-about h3,
+.service2-about h3,
+.service3-about h3 {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  color: #32425c;
+  text-transform: uppercase
+}
+#service-1:checked ~ .service1-about,
+#service-2:checked ~ .service2-about,
+#service-3:checked ~ .service3-about {
+  display: block;
 }
 /* Хлебные крошки*/
 .breadcrumbs {
@@ -919,6 +1081,16 @@ a {
 .filter-input:disabled:checked + label::before {
   opacity: 0.2; 
 }
+.catalog-main {
+  min-height: 90px;
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-left: 30px;
+  background-color: #f3f7f9;
+}
 .catalog-columns {
   display: flex;
   justify-content: space-between;
@@ -956,7 +1128,6 @@ a {
 }
 .popular .catalog-item:nth-child(4n) {
   margin-right: 0;
-  
 }
 .catalog-item:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -1225,7 +1396,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
- 
 }
 .footer-menu2 a {
   color: #ffd180; 
@@ -1252,14 +1422,12 @@ a {
 .footer-bottom .container {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 20px;
-  
+  padding-top: 20px;  
   font-size: 16px;    
   line-height: 18px;  
 }
 .copyright {
   width: 250px;
-
 }
 .footer-social {
   display: flex;
@@ -1539,7 +1707,4 @@ a {
 }
 .show {
   display: block;
-}
-.non-show {
-  display: none;
 }
