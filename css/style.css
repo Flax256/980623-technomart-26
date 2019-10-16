@@ -569,7 +569,8 @@ a {
   margin: 0;
   margin-top: 20px;
 }
-.btn-advantage {
+.link-advantage {
+  display: block;
   width: 135px;
   height: 38px;
   font-size: 14px;
@@ -577,17 +578,19 @@ a {
   margin: 0;
   margin-top: 12px;
   padding: :0;
+  padding-top: 10px;
+  text-align: center;
   color: inherit;
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
   border-radius: 2px; 
 }
-.btn-advantage:hover {
+.link-advantage:hover {
   background-color: rgba(0, 0, 0, 0.2);
   outline: none;
 }
-.btn-advantage:active {
+.link-advantage:active {
   background-color: rgba(0, 0, 0, 0.3);
   outline: none;
 }
@@ -645,6 +648,7 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: #675b53;
 }
 .slider-list::before {
   position: absolute;
@@ -710,8 +714,9 @@ a {
 
 }
 .slider-about .button-red {
-  padding-left: 48px;
-  padding-right: 48px;
+  display: block;
+  width: 195px;
+  padding-top: 11px;
 }
 .advantage-column {
   display: flex;
@@ -744,7 +749,9 @@ a {
   text-transform: uppercase;
   padding-left: 30px;
 }
-.popular .button-red {
+.popular .button-red,
+.popular-brend .button-red {
+  padding-top: 11px;
   margin-right: 24px;
   min-width: 253px;
 }
@@ -753,10 +760,6 @@ a {
   line-height: 30px;
   text-transform: uppercase;
   padding-left: 30px;
-}
-.popular-brend .button-red {
-  margin-right: 24px;
-  min-width: 253px;
 }
 .brend-catalog {
   width: 940px;
@@ -914,6 +917,21 @@ a {
 #service-3:checked ~ .service3-about {
   display: block;
 }
+.service-catalog {
+  min-height: 261px;
+}
+.service-catalog h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;    
+  line-height: 30px;
+  padding-top: 64px;
+  padding-bottom: 1px;
+  text-transform: uppercase;
+}
+.service-catalog p {
+  padding: 0;
+  margin: 0; 
+}
 /* Хлебные крошки*/
 .breadcrumbs {
   display: flex;
@@ -973,12 +991,107 @@ a {
 .breadcrumbs li:nth-child(4)::after { 
   display: none;
 }
+/* Начало блока bar */
+.range-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 220px;
+  min-height: 220px;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.range-filter{
+  min-height: 38px;
+  font-size: 13px;
+  line-height: 18px;
+  padding-top: 11px;
+  padding-left: 18px;
+  background-color: #f7f3ec;
+}
+.range-price {
+  min-height: 55px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.container-scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 55px;
+  font-weight: bold;
+  margin-bottom: 9px;
+  background-color: #f7f3ec;
+}
+.scale {
+  position: relative;
+  width: 180px;
+  height: 2px;
+  margin: 0;
+  background-color: #d7dcde;
+}
+.bar {
+  width: 80%;
+  height: 2px;
+  background-color: #00ca74;
+}
+.range-toggle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: -9px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.range-toggle-min {
+  left: -10px;
+}
+.range-toggle-max {
+  left: calc(80% - 10px);
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+.range {
+  display: flex;
+  justify-content: space-between;
+  min-height: 38px;
+}
+.range-start,
+.range-end {
+  width: 95px;
+  height: 38px;
+  text-align: center;
+  padding-top: 5px;
+  background-color: #f7f3ec;
+}
+.range-middle {
+  padding-top: 5px;
+}
+.range input {
+  width: 95px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
 /* Настройки для фильтров */
 .company,
 .power {
   position: relative;
   border: 0 none;
   padding: 0;
+}
+.border {
+  width: 220px;
+  margin-bottom: 16px;
+  border-top: 1px solid #e5e5e5;
 }
 .company legend,
 .power legend {
@@ -993,16 +1106,18 @@ a {
   min-height: 877px;
 }
 .filters .button-white {
+  width: 140px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  padding: 8px 39px;
+  text-align: center;
+  margin-top: 56px;
   border: 1px solid #e5e5e5;
   text-transform: uppercase;
+  border-radius: 2px;
 }
 .filter ul {
   padding-left: 34px;
-  padding-bottom: 20px;
 }
 .filter-option label {
   position: relative;
@@ -1098,6 +1213,94 @@ a {
 .catalog {
   width: 700px;
   min-height: 1085;
+}
+/* Начало блока сортировки */
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 38px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: #f7f3ec;
+  margin-bottom: 20px;
+}
+.sorting h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding-left: 19px;
+  padding-right: 95px;
+}
+.sorting-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  min-width: 354px;
+  padding: 0;
+  margin: 0;
+}
+.sorting-list li {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #ee3643;
+}
+#category-price:checked ~ .sorting-list .li-price,
+#category-type:checked ~ .sorting-list .li-type,
+#category-func:checked ~ .sorting-list .li-func {
+  color: #ee3643;
+  text-decoration: none;
+}
+.sorting-list li:hover {
+  text-decoration-style: solid;
+  color: rgba(0, 0, 0, 1);
+}
+.sorting-direction {
+  display: flex;
+  justify-content: space-between;
+}
+.sort-inc {
+  display: inline-block;
+  position: relative;
+  width: 11px;
+  height: 11px;
+  margin-right: 21px;
+}
+.svg-top {
+  position: absolute;
+  top: 0px;
+}
+.pointer-top {
+  transform-origin: center center;
+}
+.sort-dec {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  margin-right: 17px;
+}
+.svg-bottom {
+  position: absolute;
+  top: 0px;
+}
+.pointer-bottom {
+  transform-origin: center center;
+  transform: rotate(180deg);
+}
+#direction-top:checked ~ .sort-inc .pointer-top,
+#direction-bottom:checked ~ .sort-dec .pointer-bottom {
+  fill: #ee3643;
+}
+.pointer-top:hover,
+.pointer-bottom:hover {
+  fill: rgba(0, 0, 0, 1);
 }
 .catalog-popular {
   width: 940px;
@@ -1345,6 +1548,7 @@ a {
   width: 300px;
   height: 158px;
   margin-bottom: auto;
+  cursor: pointer;
 }
 .contacts-img img {
   margin-top: 20px;
@@ -1353,9 +1557,53 @@ a {
   height: auto;
 }
 .contacts-main .button-red {
+  padding-top: 11px;
   padding-left: 0;
   padding-right: 0;
   margin-top: auto;
+}
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none; 
+  padding: 32px 0 35px 0;
+  margin: 0;
+}
+.pagination-item  {
+  display: block;
+  width: 38px;
+  height: 38px;
+  padding-top: 9px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+.pagination-list li:last-child a {
+  width: 140px;
+  margin-right: 0;
+}
+.pagination-item-current {
+  color: #ffffff;
+  border: none;
+  background-color: #ee3643;
+}
+.pagination-item:hover {
+  border: 1px solid #bdc6ca;
+}
+.pagination-item-current:hover {
+  border: none;
+}
+.pagination-item:active {
+  border: 1px solid #ee3643;
+}
+.pagination-item-current:active {
+  border: none;
 }
 /* Начало блока footer */
 .main-footer {
