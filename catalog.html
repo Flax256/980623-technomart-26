@@ -65,33 +65,31 @@
         <div class="catalog-columns">
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <div class="range-controls">
-              <div class="range-filter">
-                Фильтр:
-              </div>
-              <div class="range-price">
-                Цена:
-              </div>
-              <div class="container-scale">
-                <div class="scale">
-                  <div class="bar"></div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
-                </div>
-              </div>
-              <div class="range">
-                <div class="range-start">
-                  <label class="min-price"><input type="text" name="min-price" value="0" aria-label="Минимальная цена товара"></label>
-                </div>
-                <div class="range-middle">
-                  -
-                </div>
-                <div class="range-end">
-                  <label class="max-price"><input type="text" name="max-price" value="30000" aria-label="Максимальная цена товара"></label>
-                </div>
-              </div>
-            </div>
             <form class="filter" action="https://catalog.html" method="get">
+              <div class="range-filter">
+                  Фильтр:
+              </div>
+              <fieldset class="range-controls">
+                <legend>Цена:</legend>
+                <div class="container-scale">
+                  <div class="scale">
+                    <div class="bar"></div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
+                  </div>
+                </div>
+                <div class="range">
+                  <div class="range-start">
+                    <label class="min-price"><input type="text" name="min-price" value="0" aria-label="Минимальная цена товара"></label>
+                  </div>
+                  <div class="range-middle">
+                    -
+                  </div>
+                  <div class="range-end">
+                    <label class="max-price"><input type="text" name="max-price" value="30000" aria-label="Максимальная цена товара"></label>
+                  </div>
+                </div>
+              </fieldset>
               <div class="border"></div>
               <fieldset class="company">
                 <legend>Производители:</legend>
@@ -137,7 +135,7 @@
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Каталог</h2>
-            <div class="sorting">
+            <form class="sorting">
               <h3>Сортировка:</h3>
               <input class="visually-hidden" type="radio" name="sort-category" id="category-price" checked>
               <input class="visually-hidden" type="radio" name="sort-category" id="category-type">
@@ -146,7 +144,7 @@
                 <li class="li-price"><label for="category-price">По цене</label></li>
                 <li class="li-type"><label for="category-type">По типу</label></li>
                 <li class="li-func"><label for="category-func">По функционалу</label></li>
-              </ul>     
+              </ul> 
               <div class="sorting-direction">
                 <input class="visually-hidden" type="radio" name="sort-direction" id="direction-top" checked>
                 <input class="visually-hidden" type="radio" name="sort-direction" id="direction-bottom">
@@ -163,7 +161,7 @@
                   </svg>
                 </label>  
               </div>
-            </div>
+            </form>
             <ul class="catalog-list no-point">
               <li class="catalog-item"> 
                 <h3 class="name-item">
