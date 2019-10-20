@@ -35,12 +35,21 @@ btnbuy.addEventListener("click", function (evt) {
   }
 });
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener("submit", function (evt) {   
   if (!uname.value || !email.value || !vtext.value) {
     evt.preventDefault();
     modalconnection.classList.remove("modal-error");
     modalconnection.offsetWidth = modalconnection.offsetWidth;
     modalconnection.classList.add("modal-error");
+    if (!vtext.value) {
+      vtext.focus();
+    }
+    if (!email.value) {
+      email.focus();
+    }
+    if (!uname.value) {
+      uname.focus();
+    }
   } else {
     if (isStorageSupport) {
       localStorage.setItem("uname", uname.value);

@@ -548,6 +548,7 @@ a {
   justify-content: space-between;
   width: 100%;
   min-height: 410px;
+  margin-top: 59px;
   margin-bottom: 53px;
 }
 .advantage-slider {
@@ -1822,9 +1823,6 @@ a {
     transform: translateX(-50%) translateY(-50%) translateX(10px);
   }
 }
-.modal-error {
-  animation: shake 0.6s;
-}
 .modal {
   position: fixed;
   top: 50%;
@@ -1910,7 +1908,7 @@ a {
   border: 2px solid #b5b5b5;
 }
 .inline-edit input:focus {
-  border: 2px solid #ee3643;
+  border: 2px solid skyblue;
 }
 .inline-edit input::placeholder {
   font-size: 13px;
@@ -1948,7 +1946,7 @@ a {
   border: 2px solid #b5b5b5;
 }
 .letter-text:focus {
-  border: 2px solid #ee3643;
+  border: 2px solid skyblue;
 }
 .connection-bottom .button-red {
   border-radius: 5px/2px;
@@ -2037,4 +2035,7 @@ a {
 .show {
   display: block;
   animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
 }
