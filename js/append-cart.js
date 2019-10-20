@@ -7,7 +7,16 @@ btnbuy.forEach(function(item) {
     modalcart.classList.add("show");
   });
 });
-  
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalcart.classList.contains("show")) {
+      evt.preventDefault();
+      modalcart.classList.remove("show");
+    }
+  }
+});
+
 closecart.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalcart.classList.remove("show");

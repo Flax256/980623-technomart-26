@@ -10,8 +10,10 @@
     <header class="grey-ground">
       <div class="header-top">
         <div class="container">
-          <a class="logo-active" href="index.html">  
-            <img class="logo-top" src="img/logo-technomart.svg" alt="Логотип «Техномарт»"> 
+          <a class="logo-active" href="index.html">
+            <div class="logo-container">
+              <img class="logo-top" src="img/logo-technomart.svg" width="137" height="22" alt="Логотип «Техномарт»"> 
+            </div>
           </a>
           <form class="finder" action="https://echo.htmlacademy.ru" method="post">
             <label aria-label="Строка для поиска">
@@ -65,7 +67,7 @@
         <div class="catalog-columns">
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form class="filter" action="https://catalog.html" method="get">
+            <form class="filter" action="https://echo.htmlacademy.ru" method="post">
               <div class="range-filter">
                   Фильтр:
               </div>
@@ -130,33 +132,37 @@
                   </li>   
                 </ul>         
               </fieldset> 
-              <button class="button-white" type="submit" class="filter-button">Показать</button>   
+              <button class="button-white filter-button" type="submit">Показать</button>   
             </form>  
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Каталог</h2>
             <form class="sorting">
               <h3>Сортировка:</h3>
-              <input class="visually-hidden" type="radio" name="sort-category" id="category-price" checked>
-              <input class="visually-hidden" type="radio" name="sort-category" id="category-type">
-              <input class="visually-hidden" type="radio" name="sort-category" id="category-func">
               <ul class="sorting-list">
-                <li class="li-price"><label for="category-price">По цене</label></li>
-                <li class="li-type"><label for="category-type">По типу</label></li>
-                <li class="li-func"><label for="category-func">По функционалу</label></li>
+                <li>
+                  <input class="visually-hidden" type="radio" name="sort-category" id="category-price" checked>
+                  <label class="label-price" for="category-price">По цене</label>
+                </li>
+                <li>
+                  <input class="visually-hidden" type="radio" name="sort-category" id="category-type">
+                  <label class="label-type" for="category-type">По типу</label>
+                </li>
+                <li>
+                  <input class="visually-hidden" type="radio" name="sort-category" id="category-func">
+                  <label class="label-func" for="category-func">По функционалу</label>
+                </li>
               </ul> 
               <div class="sorting-direction">
                 <input class="visually-hidden" type="radio" name="sort-direction" id="direction-top" checked>
-                <input class="visually-hidden" type="radio" name="sort-direction" id="direction-bottom">
                 <label class="sort-inc" for="direction-top" aria-label="Сортировка по возрастанию">
                   <svg  class="svg-top" width="11" height="11" viewBox="0 0 11 10">
-                    <path id="sort-top"/>
                     <polygon class="pointer-top" points="0,10 6,0 11,10" fill="#c5c5c5"/> 
                   </svg>
-                </label>  
+                </label>
+                <input class="visually-hidden" type="radio" name="sort-direction" id="direction-bottom">
                 <label class="sort-dec" for="direction-bottom" aria-label="Сортировка по убыванию">
                   <svg  class="svg-bottom" width="11" height="11" viewBox="0 0 11 10">
-                    <path id="sort-bottom"/>
                     <polygon class="pointer-bottom" points="0,10 6,0 11,10" fill="#c5c5c5"/> 
                   </svg>
                 </label>  
@@ -324,8 +330,10 @@
     <footer class="main-footer">
       <div class="container">
         <div class="contacts-footer">
-          <a class="logo-active"  href="index.html">  
-            <img class="logo-bottom" src="img/logo-technomart.svg" alt="Логотип  «Техномарт»"> 
+          <a class="logo-active"  href="index.html">
+            <div class="logo-footer">
+              <img class="logo-bottom" src="img/logo-technomart.svg" width="137" height="22" alt="Логотип  «Техномарт»"> 
+            </div>
           </a>
           <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная,   д. 19/8 <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </p>  
@@ -376,9 +384,10 @@
       </div>      
     </footer>
     <section class="modal append-cart">
+      <h2 class="visually-hidden">Модальное окно добавления в корзину</h2>
       <div class="ready container-modal">
-        <div class="ok">
-          <img src="img/icon-mark.svg" alt="Добавлено!">
+        <div class="check-cart">
+          <img src="img/icon-mark.svg" width="66" height="66" alt="Добавлено!">
         </div>  
         <div> Товар добавлен в корзину!</div> 
       </div>  

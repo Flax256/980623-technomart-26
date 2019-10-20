@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">        
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="grey-ground">
       <div class="header-top">
         <div class="container">
-          <a class="logo"><img class="logo-top" src="img/logo-technomart.svg" alt="Логотип «Техномарт»"></a>
+          <a class="logo">
+            <div class="logo-container">
+              <img class="logo-top" src="img/logo-technomart.svg" width="137" height="22" alt="Логотип «Техномарт»">
+            </div>  
+          </a>
           <form class="finder" action="https://echo.htmlacademy.ru" method="post">
             <label aria-label="Строка для поиска">
               <input type="text" id="finder-field" placeholder="Поиск:">
@@ -73,14 +77,16 @@
             </div>
             <section class="slider">
               <h3 class="visually-hidden">Слайдер</h3>
-              <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
-              <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
+              <input class="visually-hidden slider-1" type="radio" id="slide-1" name="toggle" checked>
+              <input class="visually-hidden slider-2" type="radio" id="slide-2" name="toggle">
               <div class="slider-controls">
                 <label class="radio-slider radio-label1" for="slide-1" aria-label="Переключатель на слайд 1"></label>
                 <label class="radio-slider radio-label2" for="slide-2" aria-label="Переключатель на слайд 2"></label>
               </div>
+              <button class="button-left" type="button"><img src="/img/icon-left.svg"></button>
+              <button class="button-right" type="button"><img src="/img/icon-right.svg"></button>
               <ul class="slider-list">
-                <li class="slider-item">
+                <li class="slider-first">
                   <img class="slider-img" src="img/slider-1.jpg" width="620" height="266" alt="Дрели из слайдера">
                   <div class="slider-about">
                     <h3>Перфораторы</h3>
@@ -88,7 +94,7 @@
                     <a class="button-red" href="catalog.html">Открыть каталог</a>
                   </div>
                 </li>
-                <li class="slider-item">
+                <li class="slider-second">
                   <img class="slider-img" src="img/slider-2.jpg" width="620" height="266" alt="Перфораторы из слайдера">
                   <div class="slider-about">
                     <h3>Дрели</h3>
@@ -206,12 +212,12 @@
             </li>
             <li>
               <a class="brend-item" href="">
-                <img src="img/Makita.png" width="123" height="40" alt="Логотип Makita">
+                <img src="img/makita.png" width="123" height="40" alt="Логотип Makita">
               </a>  
             </li>
             <li>
               <a class="brend-item" href="">
-                <img src="img/DeWALT.png" width="146" height="44" alt="Логотип DeWALT">
+                <img src="img/dewalt.png" width="146" height="44" alt="Логотип DeWALT">
               </a>  
             </li>
             <li>
@@ -221,22 +227,22 @@
             </li>
             <li>
               <a class="brend-item" href="">
-                <img src="img/Hitachi.png" width="169" height="31" alt="Логотип Hitachi">
+                <img src="img/hitachi.png" width="169" height="31" alt="Логотип Hitachi">
               </a>  
             </li>
             <li>
               <a class="brend-item" href="">
-                <img src="img/LG.png" width="121" height="73" alt="Логотип LG">
+                <img src="img/lg.png" width="121" height="73" alt="Логотип LG">
               </a>  
             </li>
             <li>
               <a class="brend-item" href="">
-                <img src="img/AEG.png" width="151" height="96" alt="Логотип AEG">
+                <img src="img/aeg.png" width="151" height="96" alt="Логотип AEG">
               </a>  
             </li>
             <li>
               <a class="brend-item" href="">
-                <img src="img/Metabo.png" width="204" height="69" alt="Логотип Metabo">
+                <img src="img/metabo.png" width="204" height="69" alt="Логотип Metabo">
               </a>  
             </li>
           </ul>
@@ -311,12 +317,13 @@
             <a class="contacts-img" href="">
              <img class="img-map" src="img/small-map.png" width="300" height="158" alt="Карта месторасположения">
             </a>  
-            <a class="button-red" href="">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a> 
+            <a class="write-letter button-red" href="">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a> 
           </div>
         </div>
         <section class="large-map">
+          <h2 class="visually-hidden">Карта месторасположения</h2>
           <div class="map-container">
-            <iframe src="https://yandex.ru/map-widget/v1/-/CGsO6IK~" width="940" height="446" frameborder="0" allowfullscreen="true" allowtransparency="true"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CGsO6IK~" width="940" height="446"></iframe>
             <img src="img/big-map.png" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           </div>
           <button class="btn-close close-map" type="button" aria-label="Закрыть карту"></button>   
@@ -327,7 +334,9 @@
       <div class="container">
         <div class="contacts-footer">
           <a class="logo">
-            <img class="logo-bottom" src="img/logo-technomart.svg" alt="Логотип  «Техномарт»">
+            <div class="logo-footer">
+              <img class="logo-bottom" src="img/logo-technomart.svg" width="137" height="22" alt="Логотип «Техномарт»">
+            </div>  
           </a>
           <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная,   д. 19/8 <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </p>
@@ -384,30 +393,31 @@
           <div class="personal-modal">
             <div class="inline-edit">
               <label for="connection-name">Ваше имя:</label>     
-              <input id="connection-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+              <input id="connection-name" type="text" name="unique-name" value="" placeholder="Имя Фамилия" required>
             </div>
             <div class="inline-edit">
               <label for="connection-email">Ваш e-mail:</label>
-              <input id="connection-email" type="text" name="email" value="" placeholder="email@example.com">
+              <input id="connection-email" type="text" name="email" value="" placeholder="email@example.com" required>
             </div>
           </div>  
         </div>  
-        <div class="latter container-modal">
+        <div class="letter container-modal">
           <label for="connection-text">Текст письма:</label> 
-          <textarea class="latter-text" id="connection-text" rows="6" cols="60" name="text" placeholder="В свободной форме"></textarea>
+          <textarea class="letter-text" id="connection-text" rows="6" cols="60" name="text" placeholder="В свободной форме" required></textarea>
         </div>
         <div class="connection-bottom">
           <div class="container-modal">
             <button class="container-modal button-red" type="submit" aria-label="Отправить письмо">Отправить</button>
           </div>  
         </div>
-        <button class="btn-close" type="button" aria-label="Закрыть форму отправки письма"></button>
+        <button class="btn-close close-letter" type="button" aria-label="Закрыть форму отправки письма"></button>
       </form>  
     </section>
     <section class="modal append-cart">
+      <h2 class="visually-hidden">Модальное окно добавления в корзину</h2>
       <div class="ready container-modal">
-        <div class="ok">
-          <img src="img/icon-mark.svg" alt="Добавлено!">
+        <div class="check-cart">
+          <img src="img/icon-mark.svg" alt="Добавлено!" width="66" height="66">
         </div>  
         <div> Товар добавлен в корзину!</div> 
       </div>  
@@ -423,5 +433,7 @@
     </section>
     <script src="js/popup-map.js"></script>
     <script src="js/append-cart.js"></script>
+    <script src="js/write-letter.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
