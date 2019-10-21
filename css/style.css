@@ -338,8 +338,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 47px;
-  padding-bottom: 16px;
+  padding-top: 33px;
+  padding-bottom: 24px;
 }
 .header-about {
   display: block;
@@ -547,7 +547,7 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 410px;
+  min-height: 409px;
   margin-top: 59px;
   margin-bottom: 53px;
 }
@@ -556,7 +556,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
-  min-height: 410px;
+  min-height: 409px;
 }
 .advantage-row {
   display: flex;
@@ -788,7 +788,7 @@ a {
 .brend-catalog li {
   width: 220px;
   min-height: 145px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   margin-right: 20px;
   border: 1px solid #cacaca; 
 }
@@ -1353,7 +1353,7 @@ a {
   width: 220px;
   margin-bottom: 20px;
   margin-right: 20px;
-  min-height: 317px;
+  min-height: 318px;
   border: 1px solid #cacaca;
 }
 .catalog .catalog-item:nth-child(3n) {
@@ -1501,8 +1501,8 @@ a {
 .group-company {
   display: flex;
   justify-content: space-between;
-  min-height: 520px;
-  padding: 48px 0 86px 0;
+  min-height: 536px;
+  padding: 54px 0 86px 0;
 }
 .main-about {
   display: flex;
@@ -1539,14 +1539,14 @@ a {
 }
 .transport-company li {
   position: relative;
-  line-height: 38px;
+  line-height: 40px;
 }
 .transport-company li::before {
   position: absolute;
   content: "";
   width: 25px;
   height: 2px;
-  top: 16px;
+  top: 18px;
   left: -36px;
   background-color: #ee3643;
 }
