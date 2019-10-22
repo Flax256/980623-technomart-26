@@ -1,7 +1,7 @@
-var img = document.querySelector(".img-map");
+var mapLink = document.querySelector(".contacts-img");
 var modallarge = document.querySelector(".large-map");
 var close = document.querySelector(".close-map");
-img.addEventListener("click", function (evt) {
+mapLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   modallarge.classList.add("show");
 });
