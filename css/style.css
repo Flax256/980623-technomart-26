@@ -223,7 +223,7 @@ a {
   line-height: 18px;
   color: #ffffff;
   margin-left: auto;
-  padding: 12px 36px 12px 36px;
+  padding: 12px 36px;
   text-align: center;
   background-color: transparent;
 }
@@ -535,11 +535,11 @@ a {
   color: #ffffff;
   padding: 21px;
 }
-.site-navigation li:first-child {
-  padding-left: 20px;
+.site-navigation li:first-child a {
+  padding-left: 41px;
 }
-.site-navigation li:last-child {
-  padding-right: 20px;
+.site-navigation li:last-child a {
+  padding-right: 41px;
 }
 .site-navigation a:hover {
   background-color: #293449;
@@ -683,10 +683,10 @@ a {
   top: 2px;
   left: 2px;
   background-color: #ee3643;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
-#slide-1:checked ~ .slider-controls .radio-label1::after,
-#slide-2:checked ~ .slider-controls .radio-label2::after {
+.slider-1:checked ~ .slider-controls .radio-label1::after,
+.slider-2:checked ~ .slider-controls .radio-label2::after {
   display: block;
 }
 .slider-list {
@@ -916,7 +916,6 @@ a {
 }
 .service-columns {
   display: flex;
-  align-items: flex-start;
   padding-top: 68px;
 }
 .service-list label {
@@ -936,17 +935,17 @@ a {
 .service-list label:hover {
   background-color: #293449;
 }
-#service-1:checked ~ .service-list li:nth-child(1) label {
+.service-1:checked ~ .service-list li:nth-child(1) label {
   color: #000000;
   background-color: #ffffff;
   border: none; 
 }
-#service-2:checked ~ .service-list li:nth-child(2) label {
+.service-2:checked ~ .service-list li:nth-child(2) label {
   color: #000000;
   background-color: #ffffff;
   border: none; 
 }
-#service-3:checked ~ .service-list li:nth-child(3) label {
+.service-3:checked ~ .service-list li:nth-child(3) label {
   color: #000000;
   background-color: #ffffff;
   border: none; 
@@ -1002,9 +1001,9 @@ a {
   color: #32425c;
   text-transform: uppercase
 }
-#service-1:checked ~ .service1-about,
-#service-2:checked ~ .service2-about,
-#service-3:checked ~ .service3-about {
+.service-1:checked ~ .service1-about,
+.service-2:checked ~ .service2-about,
+.service-3:checked ~ .service3-about {
   display: block;
 }
 .service-catalog {
@@ -1375,9 +1374,9 @@ a {
 .sorting-list label {
   border-bottom: 1px dotted #ee3643;
 }
-#category-price:checked + .label-price,
-#category-type:checked + .label-type,
-#category-func:checked + .label-func {
+.category-price:checked + .label-price,
+.category-type:checked + .label-type,
+.category-func:checked + .label-func {
   color: #ee3643;
   border-bottom: none;
 }
@@ -1437,9 +1436,7 @@ a {
   flex-wrap: wrap;
   position: relative;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
-  position: relative;
   width: 220px;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -2055,6 +2052,7 @@ a {
   border: 2px solid skyblue;
 }
 .connection-bottom .button-red {
+  margin-top: 37px;
   border-radius: 5px/2px;
 }
 /* Описание модал добавлено в корзину */
@@ -2089,10 +2087,12 @@ a {
   align-items: center;
 }
 .send-order.button-red {
+  align-self: flex-start;
   width: 220px;
-  padding: 10px 0;  
+  padding: 10px 0;
 }
 .send-buy {
+  align-self: flex-start;
   width: 220px;
   height: 38px;
   background-color: #ffffff;
@@ -2101,6 +2101,7 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 37px;
   padding: 10px 0;
   color: #000000;
 }
@@ -2145,9 +2146,35 @@ a {
 .modal-error {
   animation: shake 0.6s;
 }
-/* Заготовка для работы с IE 11 */
+/* Поправки для работы с IE 11 */
 @media screen and (-ms-high-contrast: active),
   (-ms-high-contrast: none) {
-    .selector {
+    .header-top .logo,
+    .header-top .logo-active {
+      padding-top: 14px;
+      padding-bottom: 12px;
+    }
+    .bookmarks-link {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+    .cart-link {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+    .order-link {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+    .connection-bottom {
+      margin-top: 10px;
+    }
+    .service-list::after {
+      right: -50px;
+    }
+    .service1-about,
+    .service2-about,
+    .service3-about {
+      padding-left: 129px;
     }
 }
