@@ -573,8 +573,7 @@ a {
 }
 .item-advantage {
   display: flex;
-  justify-content: space-between;
-  position: relative;
+  justify-content: flex-start;
   width: 300px;
   min-height: 123px;
   color: #ffffff;
@@ -1031,8 +1030,8 @@ a {
   justify-content: space-between;
   width: 355px;
   padding: 0;
-  margin: 0;
   padding-top: 22px;
+  margin: 0;
 }
 .breadcrumbs li  {
   position: relative;
@@ -1769,7 +1768,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 19px 0 0 0px;
+  padding: 0;
+  padding-top: 19px;
   margin-bottom: 16px;
 }
 .footer-menu2 {
@@ -1947,10 +1947,16 @@ a {
   display: none;
   min-height: 430px;
 }
+.personal-modal {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 43px;
+}
 .btn-close {
   position: absolute;
   top: 9px;
-  right: 10px;
+  right: 4px;
   width: 22px;
   height: 22px;
   cursor: pointer;
@@ -1963,7 +1969,7 @@ a {
   content: "";
   top: 9px;
   right: 1px;
-  width: 20px;
+  width: 25px;
   height: 3px;
   background-color: #ee3643;
   transform: rotate(45deg);
@@ -1973,7 +1979,7 @@ a {
   content: "";
   top: 9px;
   right: 1px;
-  width: 20px;
+  width: 25px;
   height: 3px;
   background-color: #ee3643;
   transform: rotate(-45deg);
@@ -1983,14 +1989,8 @@ a {
   min-height: 112px;
   background-color: #f1f1f1;
 }
-.connection-form label{
+.connection-form label {
   font-size: 20px;
-}
-.personal-modal {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  padding-top: 50px;
 }
 .inline-edit {
   display: flex;
@@ -1998,6 +1998,7 @@ a {
 }
 .inline-edit input {
   padding-left: 14px;
+  margin-top: 7px;
   min-width: 220px;
   height: 38px;
   font-size: 13px;
@@ -2013,13 +2014,8 @@ a {
 .inline-edit input:focus {
   border: 2px solid skyblue;
 }
-.inline-edit input::placeholder {
-  font-size: 13px;
-  line-height: 18px;
-  font-family: "PT Sans", Arial, sans-serif;
-  color: #a9a9a9;
-}
-.connection-name::placeholder {
+.connection-name::placeholder,
+.connection-email::placeholder {
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -2037,6 +2033,7 @@ a {
   font-family: "PT Sans", Arial, sans-serif;
   padding-top: 9px;
   padding-left: 14px;
+  margin-top: 6px;
   margin-bottom: 29px;
   border: 2px solid #dee3e4;
   border-radius: 2px;
@@ -2067,7 +2064,7 @@ a {
   align-items: center;
   font-size: 30px;
   line-height: 30px;
-  padding: 48px 0;
+  padding: 48px 0 50px 0;
 }
 .check-cart {
   width: 66px;
@@ -2166,6 +2163,9 @@ a {
       padding-top: 13px;
       padding-bottom: 13px;
     }
+    .advantage-slider {
+      margin-left: -10px;
+    }
     .connection-bottom {
       margin-top: 10px;
     }
@@ -2177,4 +2177,14 @@ a {
     .service3-about {
       padding-left: 129px;
     }
+}
+/* Поправки для работы с ForeFox */
+@-moz-document url-prefix() {
+  .company::before,
+  .power::before {
+    top: -47px;
+  }
+  .inline-edit input::placeholder {
+    color: #a9a9a9;
+  }
 }
