@@ -1946,6 +1946,13 @@ a {
 .connection  {
   display: none;
   min-height: 430px;
+  //padding: 0;
+}
+.personal-modal {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 43px;
 }
 .personal-modal {
   display: flex;
@@ -2188,3 +2195,10 @@ a {
     color: #a9a9a9;
   }
 }
+<<<<<<< HEAD
+=======
+/* Поправки для работы с CHROME */
+@media and (-webkit-min-device-pixel-ratio:0) {
+  
+}
+>>>>>>> feb8b73f3ce157d32aae2e3d93b431443b50bb36
