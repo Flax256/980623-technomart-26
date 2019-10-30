@@ -932,17 +932,17 @@ a {
 .service-list label:hover {
   background-color: #293449;
 }
-.service-1:checked ~ .service-list li:nth-child(1) label {
+.service-1:checked ~ .service-list .lab-1 {
   color: #000000;
   background-color: #ffffff;
   border: none; 
 }
-.service-2:checked ~ .service-list li:nth-child(2) label {
+.service-2:checked ~ .service-list .lab-2 {
   color: #000000;
   background-color: #ffffff;
   border: none; 
 }
-.service-3:checked ~ .service-list li:nth-child(3) label {
+.service-3:checked ~ .service-list .lab-3 {
   color: #000000;
   background-color: #ffffff;
   border: none; 
@@ -1408,6 +1408,7 @@ a {
 .svg-top {
   position: absolute;
   top: 0px;
+  fill: #c5c5c5;
 }
 .pointer-top {
   transform-origin: center center;
@@ -1421,12 +1422,13 @@ a {
 .svg-bottom {
   position: absolute;
   top: 0px;
+  fill: #c5c5c5;
 }
 .pointer-bottom {
   transform-origin: center center;
 }
-.direction-top:checked ~ .sort-inc .pointer-top,
-.direction-bottom:checked ~ .sort-dec .pointer-bottom {
+.direction-top:checked + .svg-top,
+.direction-bottom:checked + .svg-bottom {
   fill: #ee3643;
 }
 .pointer-top:hover,
