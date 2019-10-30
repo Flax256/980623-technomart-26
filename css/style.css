@@ -398,12 +398,10 @@ a {
   background-position: 0 0;
   opacity: 0.3;
 }
-.comein:hover::before
-{
+.comein:hover::before {
   opacity: 1;
 }
-.comein:active::before
-{
+.comein:active::before {
   opacity: 0.3;
 }
 .registration {
@@ -422,6 +420,7 @@ a {
   text-align: left;
   padding-top: 12px;
   padding-left: 47px;
+  padding-right: 40px;
   color: #000000;
   background-color: #ffffff;
 }
@@ -535,10 +534,10 @@ a {
   color: #ffffff;
   padding: 21px;
 }
-.site-navigation li:first-child a {
+.menu-left a {
   padding-left: 41px;
 }
-.site-navigation li:last-child a {
+.menu-right a {
   padding-right: 41px;
 }
 .site-navigation a:hover {
@@ -759,7 +758,6 @@ a {
   padding: 0;
   margin-top: -4px;
   margin-bottom: 121px;
-
 }
 .slider-about .button-red {
   display: block;
@@ -825,7 +823,6 @@ a {
   align-items: center;
   margin-bottom: 20px;
   background-color: #f9f5f0;
-  
 }
 .popular h2 {
   font-size: 30px;
@@ -892,6 +889,7 @@ a {
   text-transform: uppercase;
 }
 .service p {
+  width: 358px;
   margin: 0;
 }
 .service-list {
@@ -1000,6 +998,21 @@ a {
   color: #32425c;
   text-transform: uppercase
 }
+.service1-about .service1-p1 {
+  width: 250px;
+  padding-top: 26px;
+}
+.service1-about .service1-p2 {
+  width: 172px;  
+}
+.service2-about p {
+  padding-top: 26px;
+  width: 340px;
+}
+.service3-about p {
+  padding-top: 26px;
+  width: 254px;  
+}
 .service-1:checked ~ .service1-about,
 .service-2:checked ~ .service2-about,
 .service-3:checked ~ .service3-about {
@@ -1017,6 +1030,7 @@ a {
   text-transform: uppercase;
 }
 .service-catalog p {
+  width: 915px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;    
   line-height: 24px;
@@ -1121,7 +1135,6 @@ a {
 .power legend {
   padding-top: 21px;
 }
-
 /* Начало блока bar */
 .range-controls {
   display: flex;
@@ -1137,7 +1150,6 @@ a {
 .range-controls {
   padding-bottom: 18px;
 }
-
 .range-filter{
   min-height: 38px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -1413,8 +1425,8 @@ a {
 .pointer-bottom {
   transform-origin: center center;
 }
-#direction-top:checked ~ .sort-inc .pointer-top,
-#direction-bottom:checked ~ .sort-dec .pointer-bottom {
+.direction-top:checked ~ .sort-inc .pointer-top,
+.direction-bottom:checked ~ .sort-dec .pointer-bottom {
   fill: #ee3643;
 }
 .pointer-top:hover,
@@ -1614,7 +1626,12 @@ a {
   font-weight: normal;
   background-color: transparent;   
 }
-.main-about p {
+.main-about .tehno-p1 {
+  width: 510px;
+  margin-bottom: 11px; 
+}
+.main-about .tehno-p2 {
+  width: 384px;
   margin-bottom: 11px; 
 }
 .transport-company {
@@ -1670,6 +1687,9 @@ a {
   font-weight: normal;
   background-color: transparent;   
 }
+.contacts-main p {
+  width: 180px;
+}
 .contacts-img {
   margin-top: 18px;
   width: 300px;
@@ -1713,7 +1733,7 @@ a {
   border: 1px solid #e5e5e5;
   border-radius: 2px;
 }
-.pagination-list li:last-child a {
+.next a {
   width: 140px;
   margin-right: 0;
   text-transform: uppercase;
