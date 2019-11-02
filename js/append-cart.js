@@ -1,7 +1,7 @@
 var btnbuy = document.querySelectorAll(".button-buy");
 var modalcart = document.querySelector(".append-cart");
 var closecart = document.querySelector(".close-cart");
-Array.prototype.forEach.call(btnbuy, function(item) {
+Array.prototype.forEach.call(btnbuy, function (item) {
   item.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalcart.classList.add("show");

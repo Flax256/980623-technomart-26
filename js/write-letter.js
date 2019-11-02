@@ -14,8 +14,7 @@ var storageemail = "";
 try {
   storageuname = localStorage.getItem("uname");
   storageemail = localStorage.getItem("email");
-  }
-catch (err) {
+} catch (err) {
   isStorageSupport = false;
 }
 
@@ -35,7 +34,7 @@ btnbuy.addEventListener("click", function (evt) {
   }
 });
 
-form.addEventListener("submit", function (evt) {   
+form.addEventListener("submit", function (evt) {
   if (!uname.value || !email.value || !vtext.value) {
     evt.preventDefault();
     modalconnection.classList.remove("modal-error");
